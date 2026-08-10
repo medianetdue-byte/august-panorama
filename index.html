@@ -20,7 +20,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .days-badge{font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--blue-bg);border:1px solid rgba(26,58,92,0.15);padding:4px 10px;border-radius:4px}
 .wrap{max-width:1200px;margin:0 auto;padding:28px 24px}
 .section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text3);margin-bottom:12px}
-.hero-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:16px}
+.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:16px}
 .kpi-card{background:var(--bg2);padding:22px 18px;transition:background .2s}.kpi-card:hover{background:var(--bg3)}
 .kpi-label{font-size:11px;color:var(--text3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;font-family:'DM Mono',monospace}
 .kpi-value{font-family:'DM Sans',sans-serif;font-weight:700;font-size:26px;color:var(--text);line-height:1;margin-bottom:6px}
@@ -34,21 +34,9 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .note-icon{font-size:13px;margin-bottom:5px;display:block}
 .note-title{font-family:'DM Sans',sans-serif;font-weight:600;font-size:12px;margin-bottom:4px;color:var(--text)}
 .note-text{font-size:11px;line-height:1.6;color:var(--text2)}
-.progress-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:24px}
 .progress-title{font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;color:var(--text);margin-bottom:18px}
 .prog-row{margin-bottom:16px}.prog-row:last-child{margin-bottom:0}
 .prog-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;flex-wrap:wrap;gap:4px}
-.prog-name{font-size:12px;color:var(--text2)}
-.prog-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)}
-.prog-pct{font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;color:var(--accent)}
-.track{height:5px;background:var(--bg3);border-radius:3px}
-.track-fill{height:5px;border-radius:3px}
-.fill-blue{background:linear-gradient(90deg,#1A3A5C,#2E80C0)}
-.fill-green{background:linear-gradient(90deg,#1A7A4A,#2ECC71)}
-.fill-orange{background:linear-gradient(90deg,#B85C00,#E8A040)}
-.track-grey{height:3px;background:#EEEEEA;border-radius:2px;margin-top:4px}
-.track-grey-fill{height:3px;border-radius:2px;background:#CCCCCC}
-.ms-vs.orange{color:var(--orange)}
 .days-section{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
 .day-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px}
 .day-name{font-family:'DM Sans',sans-serif;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
@@ -62,9 +50,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .chart-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:24px}
 .chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:8px}
 .chart-title{font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;color:var(--text)}
-.chart-legend{display:flex;gap:16px;font-size:11px;color:var(--text2)}
+.chart-legend{display:flex;gap:14px;font-size:11px;color:var(--text2);flex-wrap:wrap;align-items:center}
+.lg-item{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.legend-dash{display:inline-block;width:16px;height:2px;border-radius:1px;vertical-align:middle}
+.legend-rule{display:inline-block;width:0;height:11px;border-left:1px dashed var(--text3);vertical-align:middle}
 .legend-dot{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:middle}
-.chart-wrap{position:relative;height:210px} .chart-detail{margin-top:14px;padding:12px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;min-height:44px;display:flex;align-items:center;font-size:12px;color:var(--text2);transition:all 0.15s} .cd-hint{color:var(--text3);font-style:italic;font-size:11px} .cd-grid{display:flex;gap:20px;flex-wrap:wrap;width:100%;align-items:center} .cd-date{font-family:'DM Mono',monospace;font-weight:700;font-size:14px;color:var(--text);min-width:56px} .cd-item{display:flex;flex-direction:column;gap:1px} .cd-lbl{font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text3);font-family:'DM Mono',monospace} .cd-val{font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px} .cd-26{color:#C0392B} .cd-25{color:#3B9BD6} .cd-delta{font-weight:600}
+.chart-wrap{position:relative;height:330px;margin-top:4px} .chart-detail{margin-top:14px;padding:12px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;min-height:44px;display:flex;align-items:center;font-size:12px;color:var(--text2);transition:all 0.15s} .cd-hint{color:var(--text3);font-style:italic;font-size:11px} .cd-grid{display:flex;gap:20px;flex-wrap:wrap;width:100%;align-items:center} .cd-date{font-family:'DM Mono',monospace;font-weight:700;font-size:14px;color:var(--text);min-width:56px} .cd-item{display:flex;flex-direction:column;gap:1px} .cd-lbl{font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text3);font-family:'DM Mono',monospace} .cd-val{font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px} .cd-26{color:#C0392B} .cd-25{color:#3B9BD6} .cd-delta{font-weight:600}
 .table-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px}
 .table-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
 .table-header-title{font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;color:var(--text)}
@@ -82,28 +73,21 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .data-table tr:hover:not(.launch-row):not(.today-row):not(.sep-row) td{background:var(--bg3)}
 .data-table tfoot td{border-top:1px solid var(--border2);color:var(--accent);font-weight:500;background:var(--blue-bg);vertical-align:top}
 .sep-row td{background:var(--bg3)!important;color:var(--text3)!important;font-size:10px;padding:5px 10px;font-style:italic}
-.bottom-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:24px}
-.box-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px}
-.box-title{font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;margin-bottom:14px;color:var(--text)}
-.ch-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
-.ch-row:last-child{border-bottom:none}
-.ch-name{font-size:12px;color:var(--text2);min-width:100px}
-.ch-bar-wrap{flex:1;height:4px;background:var(--bg3);border-radius:2px}
-.ch-bar{height:4px;border-radius:2px}
-.ch-val{font-family:'DM Mono',monospace;font-size:11px;color:var(--text);min-width:70px;text-align:right;font-weight:500}
-.ch-pct{font-size:10px;color:var(--text3);min-width:35px;text-align:right}
 .site-footer{border-top:1px solid var(--border);padding:18px 32px;display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:8px;background:var(--bg2)}
 .footer-left{font-size:11px;color:var(--text3)}.footer-right{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)}
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:820px){
   .comp-grid,.comp-2025-strip{grid-template-columns:repeat(2,1fr)!important}
   .comp-strip{grid-template-columns:repeat(2,1fr)!important}
   .days-section{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:700px){
+  .chart-wrap{height:260px}
   .site-header{padding:12px 16px;flex-wrap:wrap;gap:8px;position:static}
   .wrap{padding:16px 14px}
   .header-right{flex-wrap:wrap;gap:8px}
-  .bottom-grid{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr 1fr}
   .kpi-value{font-size:20px}
   .data-table{font-size:10px}
@@ -171,8 +155,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
   <div class="logo">Panorama Festival '26</div>
   <div class="header-right">
     <span class="live-dot"></span>
-    <span class="update-time">Aggiornato: 8 agosto 2026 · <b>definitivo</b> · <b style="color:var(--orange)">netto omaggi</b></span>
-    <span class="days-badge">6 giorni al festival</span>
+    <span class="update-time">Aggiornato: 9 agosto 2026 · <b>definitivo</b> · <b style="color:var(--orange)">netto omaggi</b></span>
+    <span class="days-badge">5 giorni al festival</span>
   </div>
 </header>
 <div class="wrap">
@@ -183,12 +167,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <div class="update-banner-dot"></div>
     <div>
       <div class="update-banner-label">Aggiornamento dati</div>
-      <div class="update-banner-date">8 Agosto 2026</div>
+      <div class="update-banner-date">9 Agosto 2026</div>
     </div>
   </div>
   <div class="update-banner-right">
-    <div class="update-banner-metric">26.448 ticket · €1.838.593</div>
-    <div class="update-banner-sub">6 giorni · <b>Il Final frena il Day 1: 167 titoli contro 362, −54% in un giorno</b> · Day 1 al 98,0%, restano 287 presenze · Day 3 risale a 96, primo aumento in cinque giorni · 469 titoli · dati al netto degli omaggi</div>
+    <div class="update-banner-metric">26.949 ticket · €1.885.248</div>
+    <div class="update-banner-sub">5 giorni · <b>Day 1 al 99,5%: restano 73 presenze, 60 in Settore A e 13 in Settore B</b> · sold out atteso oggi · il Final rimbalza a 209 titoli (+25%), la frenata dell'8/8 era temporanea · 501 titoli · dati al netto degli omaggi</div>
   </div>
 </div>
 
@@ -201,60 +185,60 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
   <a href="#sec-mensile" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:5px 12px;text-decoration:none">Mensile</a>
   <a href="#sec-tier" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:5px 12px;text-decoration:none">Tier</a>
   <a href="#sec-vip" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:5px 12px;text-decoration:none">VIP</a>
-  <a href="#sec-canali" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:5px 12px;text-decoration:none">Canali</a>
+  
   <a href="#sec-storico" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid var(--border);background:var(--bg2);border-radius:20px;padding:5px 12px;text-decoration:none">Storico</a>
 </div>
 <!-- KPI -->
 <div id="sec-kpi"></div>
-<div class="section-label">KPI cumulativi — al 8 agosto 2026 · <span style="color:var(--orange)">al netto degli omaggi</span></div>
+<div class="section-label">KPI cumulativi — al 9 agosto 2026 · <span style="color:var(--orange)">al netto degli omaggi</span></div>
 <div class="hero-grid">
   <div class="kpi-card">
     <div class="kpi-label">Incasso totale</div>
-    <div class="kpi-value accent">€1.838.593</div>
-    <div class="kpi-delta"><span>+21%</span> vs 2025 su 3 date (€1.525k)</div>
+    <div class="kpi-value accent">€1.885.248</div>
+    <div class="kpi-delta"><span>+20%</span> vs 2025 su 3 date (€1.577k)</div>
     <div class="kpi-sub">incasso lordo cumulato · gli omaggi non incassano: invariato</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">PM cumulativo</div>
-    <div class="kpi-value">€69,52</div>
-    <div class="kpi-delta"><span>+32%</span> vs 2025 su 3 date (€52,88)</div>
+    <div class="kpi-value">€69,96</div>
+    <div class="kpi-delta"><span>+32%</span> vs 2025 su 3 date (€53,06)</div>
     <div class="kpi-sub">singoli + abbonamenti · su tutti i titoli</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">Abbonamenti</div>
-    <div class="kpi-value">1.938</div>
-    <div class="kpi-delta">€292.013 · <span>+2 l'8/8</span> · +1 presenza su tutte e 3 le giornate</div>
-    <div class="kpi-sub">GA T4: 260 · GA T3: 373 · GA T2: 915 · GA T1: 310 · Back: 80 (BS T4: 46) · <b>paganti, omaggi esclusi</b> · l'8/8 +2 Backstage T4, General Access di nuovo fermo a 1.858 · secondo giorno consecutivo di vendite Backstage · fonte C1 SIAE</div>
+    <div class="kpi-value">1.943</div>
+    <div class="kpi-delta">€295.488 · <span>+5 il 9/8</span> · +1 presenza su tutte e 3 le giornate</div>
+    <div class="kpi-sub">GA T4: 260 · GA T3: 373 · GA T2: 915 · GA T1: 310 · Back: 85 (BS T4: 51) · <b>paganti, omaggi esclusi</b> · il 9/8 +5 Backstage T4, General Access fermo a 1.858 · <b>terzo giorno consecutivo di vendite Backstage</b>: 4, 2, 5 · fonte C1 SIAE</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">Tier attivo</div>
     <div class="kpi-value" style="color:var(--orange)">€94,00<span style="font-size:15px;color:var(--text3);font-weight:500"> / €82,00</span></div>
     <div class="kpi-delta"><span>Final</span> sul Day 1 · Tier 5 su Day 2 e Day 3</div>
-    <div class="kpi-sub">Final sul Day 1 dal 7/8 (482 titoli cumulati) · prezzo cliente €94,00 contro €94,88 di listino · <b>primo giorno pieno a €94: 167 titoli contro i 315 del giorno di apertura</b> · T5 €82,00 su Day 2 e Day 3</div>
+    <div class="kpi-sub">Final sul Day 1 dal 7/8 (691 titoli cumulati) · prezzo cliente €94,00 contro €94,88 di listino · <b>sequenza a €94: 315 → 167 → 209</b>, la frenata dell'8/8 non era una tendenza · T5 €82,00 su Day 2 e Day 3</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">Presenze totali 3 giornate</div>
-    <div class="kpi-value">30.324</div>
-    <div class="kpi-delta">72,2% del soldout · <span>mancano 11.676</span></div>
+    <div class="kpi-value">30.835</div>
+    <div class="kpi-delta">73,4% del soldout · <span>mancano 11.165</span></div>
     <div class="kpi-sub">Cap. 42.000 (14k×3 · confermata dai C1) · ratio D3/D1 0,431×</div>
   </div>
   <div class="kpi-card">
-    <div class="kpi-label">Vendita giorno prima <span style="font-weight:400;font-size:9px">(7/8)</span></div>
-    <div class="kpi-value">654</div>
-    <div class="kpi-delta">649 singoli · 5 abb · giornata chiusa</div>
-    <div class="kpi-sub">€59.903 · PM €91,59</div>
+    <div class="kpi-label">Vendita giorno prima <span style="font-weight:400;font-size:9px">(8/8)</span></div>
+    <div class="kpi-value">469</div>
+    <div class="kpi-delta">467 singoli · 2 abb · giornata chiusa</div>
+    <div class="kpi-sub">€41.688 · PM €88,89</div>
   </div>
   <div class="kpi-card" style="border-top:3px solid #1A7A4A">
-    <div class="kpi-label">Vendita odierna <span style="font-weight:400;font-size:9px">(8/8 · definitiva)</span></div>
-    <div class="kpi-value" style="color:var(--orange)">469</div>
-    <div class="kpi-delta">467 singoli · 2 abb · <span style="color:var(--orange)">−28% sul 7/8</span></div>
-    <div class="kpi-sub">€41.688 · PM €88,89 · D1 167 (tutti Final €94) · D2 204 · D3 96 · 2 Backstage · prima giornata sotto 650 dopo cinque</div>
+    <div class="kpi-label">Vendita odierna <span style="font-weight:400;font-size:9px">(9/8 · definitiva)</span></div>
+    <div class="kpi-value green">501</div>
+    <div class="kpi-delta">496 singoli · 5 abb · <span>+7% sull'8/8</span></div>
+    <div class="kpi-sub">€46.655 · PM €93,12 · D1 209 (tutti Final €94) · D2 195 · D3 92 · 5 Backstage · PM di giornata più alto della stagione</div>
   </div>
   <div class="kpi-card">
-    <div class="kpi-label">Ultimi 7 giorni (2/8–8/8)</div>
-    <div class="kpi-value accent">€380.501</div>
-    <div class="kpi-delta">media <span>€54.357/g</span> · <span>658 tk/g</span></div>
-    <div class="kpi-sub">4.604 ticket netti in 7 gg · 105 titoli a prezzo zero esclusi (vedi nota)</div>
+    <div class="kpi-label">Ultimi 7 giorni (3/8–9/8)</div>
+    <div class="kpi-value accent">€387.988</div>
+    <div class="kpi-delta">media <span>€55.427/g</span> · <span>659 tk/g</span></div>
+    <div class="kpi-sub">4.610 ticket netti in 7 gg · 109 titoli a prezzo zero esclusi (vedi nota)</div>
   </div>
 </div>
 
@@ -264,13 +248,14 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
   <div class="chart-header">
     <div>
       <div class="chart-title">Andamento comparativo curva biglietti</div>
-      <div style="font-size:11px;color:var(--text3);margin-top:2px">Totale venduto cumulato al netto degli omaggi, <b>su tutta la stagione fino al festival</b> · il 2025 aveva 4 serate: la curva verde ne isola le prime 3, ed è quella confrontabile · la linea tratteggiata è la proiezione centrale, riancorata ai dati del 4/8 (34.291 titoli)</div>
+      <div style="font-size:11px;color:var(--text3);margin-top:3px;line-height:1.5;max-width:720px">Venduto cumulato netto omaggi, da maggio all'apertura del festival · il 2025 aveva quattro serate: <b style="color:var(--green)">la verde ne isola le prime tre</b>, l'unica curva confrontabile · proiezione riancorata al 4/8 (34.291)</div>
     </div>
     <div class="chart-legend">
-      <span><span class="legend-dot" style="background:#C0392B"></span>2026 (attuale)</span>
-      <span><span class="legend-dot" style="background:rgba(192,57,43,0.42)"></span>2026 — proiezione</span>
-      <span><span class="legend-dot" style="background:#3B9BD6"></span>2025 — 4 date</span>
-      <span><span class="legend-dot" style="background:#1A7A4A"></span>2025 — prime 3 date</span>
+      <span class="lg-item"><span class="legend-dot" style="background:#C0392B"></span>2026</span>
+      <span class="lg-item"><span class="legend-dash" style="background:repeating-linear-gradient(90deg,rgba(192,57,43,0.55) 0 5px,transparent 5px 8px)"></span>2026 proiezione</span>
+      <span class="lg-item"><span class="legend-dot" style="background:#1A7A4A"></span>2025 · prime 3 date <b style="font-weight:600;color:var(--green)">(confrontabile)</b></span>
+      <span class="lg-item" style="opacity:.6"><span class="legend-dash" style="background:repeating-linear-gradient(90deg,#3B9BD6 0 5px,transparent 5px 8px)"></span>2025 · 4 date</span>
+      <span class="lg-item" style="opacity:.75"><span class="legend-rule"></span>oggi / apertura festival</span>
     </div>
   </div>
   <div class="chart-wrap"><canvas id="chartMain"></canvas></div>
@@ -280,22 +265,22 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 </div>
 
 <!-- CONFRONTO VS 2025 -->
-<div class="section-label">Confronto vs 2025 — stesso periodo (al 8 agosto) · <b style="color:var(--green)">2025 ricalcolato sulle sole prime 3 giornate</b>, per confrontare tre serate con tre serate</div>
+<div class="section-label">Confronto vs 2025 — stesso periodo (al 9 agosto) · <b style="color:var(--green)">2025 ricalcolato sulle sole prime 3 giornate</b>, per confrontare tre serate con tre serate</div>
 <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px">
 
   <div class="comp-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--border)">
     <div style="padding:18px 18px;border-right:1px solid var(--border)">
       <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Incasso totale</div>
       <div style="display:flex;align-items:baseline;gap:7px;margin-bottom:5px">
-        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:var(--accent)">€1.838.593</span>
-        <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--green);background:rgba(26,122,74,0.1);padding:2px 6px;border-radius:4px">+21%</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:var(--accent)">€1.885.248</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--green);background:rgba(26,122,74,0.1);padding:2px 6px;border-radius:4px">+20%</span>
       </div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs €1.525.072 (2025, 3 date)</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs €1.577.087 (2025, 3 date)</div>
       <div style="position:relative;height:7px;background:var(--bg3);border-radius:4px;margin-bottom:4px">
         <div style="position:absolute;left:0;top:0;height:7px;width:100%;background:var(--accent);border-radius:4px;opacity:0.85"></div>
       </div>
       <div style="position:relative;height:5px;background:var(--bg3);border-radius:4px">
-        <div style="position:absolute;left:0;top:0;height:5px;width:82.9%;background:#BBBBBB;border-radius:4px"></div>
+        <div style="position:absolute;left:0;top:0;height:5px;width:83.7%;background:#BBBBBB;border-radius:4px"></div>
       </div>
       <div style="display:flex;justify-content:space-between;margin-top:5px">
         <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--accent);font-weight:500">2026</span>
@@ -305,12 +290,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <div style="padding:18px 18px;border-right:1px solid var(--border)">
       <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Ticket venduti</div>
       <div style="display:flex;align-items:baseline;gap:7px;margin-bottom:5px">
-        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:var(--orange)">26.448</span>
-        <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--orange);background:rgba(184,92,0,0.1);padding:2px 6px;border-radius:4px">−8%</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:var(--orange)">26.949</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--orange);background:rgba(184,92,0,0.1);padding:2px 6px;border-radius:4px">−9%</span>
       </div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs 28.838 (2025, 3 date)</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs 29.721 (2025, 3 date)</div>
       <div style="position:relative;height:7px;background:var(--bg3);border-radius:4px;margin-bottom:4px">
-        <div style="position:absolute;left:0;top:0;height:7px;width:91.7%;background:var(--orange);border-radius:4px;opacity:0.85"></div>
+        <div style="position:absolute;left:0;top:0;height:7px;width:90.7%;background:var(--orange);border-radius:4px;opacity:0.85"></div>
       </div>
       <div style="position:relative;height:5px;background:var(--bg3);border-radius:4px">
         <div style="position:absolute;left:0;top:0;height:5px;width:100%;background:#BBBBBB;border-radius:4px"></div>
@@ -323,12 +308,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <div style="padding:18px 18px;border-right:1px solid var(--border)">
       <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Presenze 3 giornate</div>
       <div style="display:flex;align-items:baseline;gap:7px;margin-bottom:5px">
-        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:#1A3A5C">30.324</span>
-        <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--orange);background:rgba(184,92,0,0.1);padding:2px 6px;border-radius:4px">−7%</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:#1A3A5C">30.835</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--orange);background:rgba(184,92,0,0.1);padding:2px 6px;border-radius:4px">−8%</span>
       </div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs 32.636 (2025, 3 date)</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs 33.519 (2025, 3 date)</div>
       <div style="position:relative;height:7px;background:var(--bg3);border-radius:4px;margin-bottom:4px">
-        <div style="position:absolute;left:0;top:0;height:7px;width:92.9%;background:#1A3A5C;border-radius:4px;opacity:0.85"></div>
+        <div style="position:absolute;left:0;top:0;height:7px;width:92.0%;background:#1A3A5C;border-radius:4px;opacity:0.85"></div>
       </div>
       <div style="position:relative;height:5px;background:var(--bg3);border-radius:4px">
         <div style="position:absolute;left:0;top:0;height:5px;width:100%;background:#BBBBBB;border-radius:4px"></div>
@@ -341,15 +326,15 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <div style="padding:18px 18px;">
       <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Prezzo medio</div>
       <div style="display:flex;align-items:baseline;gap:7px;margin-bottom:5px">
-        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:var(--accent)">€69,52</span>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:23px;color:var(--accent)">€69,96</span>
         <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;color:var(--green);background:rgba(26,122,74,0.1);padding:2px 6px;border-radius:4px">+32%</span>
       </div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs €52,88 (2025, 3 date)</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:var(--text3);margin-bottom:12px">vs €53,06 (2025, 3 date)</div>
       <div style="position:relative;height:7px;background:var(--bg3);border-radius:4px;margin-bottom:4px">
         <div style="position:absolute;left:0;top:0;height:7px;width:100%;background:var(--accent);border-radius:4px;opacity:0.85"></div>
       </div>
       <div style="position:relative;height:5px;background:var(--bg3);border-radius:4px">
-        <div style="position:absolute;left:0;top:0;height:5px;width:76.1%;background:#BBBBBB;border-radius:4px"></div>
+        <div style="position:absolute;left:0;top:0;height:5px;width:75.9%;background:#BBBBBB;border-radius:4px"></div>
       </div>
       <div style="display:flex;justify-content:space-between;margin-top:5px">
         <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--accent);font-weight:500">2026</span>
@@ -360,12 +345,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 
   <div class="comp-strip" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--bg3)">
     <div style="padding:14px 20px;border-right:1px solid var(--border)">
-      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">INCASSO 2025 AL 8/8 (3 DATE)</div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;color:var(--text2)">€1.525.072</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">INCASSO 2025 AL 9/8 (3 DATE)</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;color:var(--text2)">€1.577.087</div>
     </div>
     <div style="padding:14px 20px;border-right:1px solid var(--border)">
-      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">TICKET 2025 AL 8/8 (3 DATE)</div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;color:var(--text2)">28.838 · di cui 1.899 abb</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">TICKET 2025 AL 9/8 (3 DATE)</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;color:var(--text2)">29.721 · di cui 1.899 abb</div>
     </div>
     <div style="padding:14px 20px">
       <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">PM 2025 · FINALE STAGIONE (3 DATE)</div>
@@ -375,80 +360,42 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 
 </div>
 
-<!-- PROGRESS -->
-<div id="sec-riempimento"></div>
-<div class="progress-section">
-  <div class="progress-title">Avanzamento verso il soldout — presenze per giornata</div>
-  <div class="prog-row">
-    <div class="prog-header">
-      <span class="prog-name">Day 1 · 14 ago — 13.713 / 14.000 presenze</span>
-      <div style="display:flex;align-items:center;gap:12px"><span class="prog-meta">mancano 287 al soldout</span><span class="prog-pct" style="color:var(--accent)">98,0%</span></div>
-    </div>
-    <div class="track"><div class="track-fill fill-blue" style="width:98.0%"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">singoli 11.775 + abbonamenti 1.938 (trasversali) · <b>167 titoli l'8/8</b>, tutti a Final €94: −54% sul 7/8, il calo più forte mai registrato dopo uno scatto · sold out atteso tra il 10 e il 12/8</div>
-  </div>
-  <div class="prog-row">
-    <div class="prog-header">
-      <span class="prog-name">Day 2 · 15 ago — 10.702 / 14.000 presenze</span>
-      <div style="display:flex;align-items:center;gap:12px"><span class="prog-meta">mancano 3.298 al soldout</span><span class="prog-pct" style="color:var(--green)">76,4%</span></div>
-    </div>
-    <div class="track"><div class="track-fill fill-green" style="width:76.4%"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">singoli 8.764 + abbonamenti 1.938 (trasversali) · <b>204 titoli l'8/8</b>, tutti a Tier 5: sesto giorno consecutivo nella banda 200–255</div>
-  </div>
-  <div class="prog-row">
-    <div class="prog-header">
-      <span class="prog-name">Day 3 · 16 ago — 5.909 / 14.000 presenze</span>
-      <div style="display:flex;align-items:center;gap:12px"><span class="prog-meta">mancano 8.091 al soldout</span><span class="prog-pct" style="color:var(--orange)">42,2%</span></div>
-    </div>
-    <div class="track"><div class="track-fill fill-orange" style="width:42.2%"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">singoli 3.971 + abbonamenti 1.938 (trasversali) · cap. 14.000 · ratio D3/D1 0,431× · 8.091 posti da vendere · <b>96 titoli l'8/8: +28%</b>, primo aumento dopo cinque giorni di calo</div>
-  </div>
-  <div class="prog-row" style="margin-top:4px;padding-top:12px;border-top:1px solid var(--border)">
-    <div class="prog-header">
-      <span class="prog-name" style="font-weight:700">Presenze totali — 30.324 / 42.000</span>
-      <div style="display:flex;align-items:center;gap:12px"><span class="prog-meta">mancano 11.676 al soldout pieno</span><span class="prog-pct" style="color:var(--accent)">72,2%</span></div>
-    </div>
-    <div class="track"><div class="track-fill" style="width:72.2%;background:linear-gradient(90deg,#1A3A5C,#2E80C0)"></div></div>
-    <div class="track-grey" style="margin-top:5px"><div class="track-grey-fill" style="width:77.7%"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">2025 stesso periodo (8/8), <b>sole prime 3 giornate</b>: 32.636 presenze (77,7%) · il 2026 è dietro di 2.312 presenze, il divario si allarga di 870 in un giorno: l'8/8/2025 valse 1.339 titoli (secondo miglior giorno della stagione sulle prime 3 date), l'8/8/2026 si ferma a 469</div>
-  </div>
-</div>
-
 <!-- RIEMPIMENTO -->
-<div class="section-label">Riempimento per giornata — al 8 agosto 2026 · netto omaggi</div>
+<div id="sec-riempimento"></div>
+<div class="section-label">Riempimento per giornata — al 9 agosto 2026 · netto omaggi</div>
 <div class="days-section">
   <div class="day-card">
     <div class="day-name">Day 1 · 14 agosto</div>
-    <div class="day-pct c1">98,0%</div>
-    <div class="day-presence">13.713 / 14.000 · 11.775 singoli</div>
-    <div class="day-bar"><div class="day-bar-fill" style="width:98.0%;background:#1A3A5C"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 9.060 + FV 2.715 + abb 1.938</div>
-    <div class="day-inc">Incasso singoli: <b>€751.129</b></div>
+    <div class="day-pct c1">99,5%</div>
+    <div class="day-presence">13.927 / 14.000 · 11.984 singoli</div>
+    <div class="day-bar"><div class="day-bar-fill" style="width:99.5%;background:#1A3A5C"></div></div>
+    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 9.269 + FV 2.715 + abb 1.943</div>
+    <div class="day-inc">Incasso singoli: <b>€770.775</b></div>
   </div>
   <div class="day-card">
     <div class="day-name">Day 2 · 15 agosto</div>
-    <div class="day-pct c2">76,4%</div>
-    <div class="day-presence">10.702 / 14.000 · 8.764 singoli</div>
-    <div class="day-bar"><div class="day-bar-fill" style="width:76.4%;background:#1A7A4A"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 6.389 + FV 2.375 + abb 1.938</div>
-    <div class="day-inc">Incasso singoli: <b>€552.880</b></div>
+    <div class="day-pct c2">77,9%</div>
+    <div class="day-presence">10.902 / 14.000 · 8.959 singoli</div>
+    <div class="day-bar"><div class="day-bar-fill" style="width:77.9%;background:#1A7A4A"></div></div>
+    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 6.584 + FV 2.375 + abb 1.943</div>
+    <div class="day-inc">Incasso singoli: <b>€568.870</b></div>
   </div>
   <div class="day-card">
     <div class="day-name">Day 3 · 16 agosto</div>
-    <div class="day-pct c3">42,2%</div>
-    <div class="day-presence">5.909 / 14.000 · 3.971 singoli</div>
-    <div class="day-bar"><div class="day-bar-fill" style="width:42.2%;background:#B85C00"></div></div>
-    <div class="day-ratio" style="color:var(--orange)">ratio D3/D1: 0,431× · 8.091 posti da vendere: la priorità della stagione</div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 2.942 + FV 1.029 + abb 1.938</div>
-    <div class="day-inc">Incasso singoli: <b>€242.571</b></div>
+    <div class="day-pct c3">42,9%</div>
+    <div class="day-presence">6.006 / 14.000 · 4.063 singoli</div>
+    <div class="day-bar"><div class="day-bar-fill" style="width:42.9%;background:#B85C00"></div></div>
+    <div class="day-ratio" style="color:var(--orange)">ratio D3/D1: 0,431× · 7.994 posti da vendere: con il Day 1 in chiusura è l'unica priorità residua</div>
+    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 3.034 + FV 1.029 + abb 1.943</div>
+    <div class="day-inc">Incasso singoli: <b>€250.115</b></div>
   </div>
   <div class="day-card" style="border:1px solid var(--accent);background:var(--blue-bg)">
     <div class="day-name">Media 3 eventi</div>
-    <div class="day-pct" style="color:var(--accent)">72,2%</div>
-    <div class="day-presence">30.324 / 42.000 presenze totali · netto omaggi</div>
-    <div class="day-bar"><div class="day-bar-fill" style="width:72.2%;background:var(--accent)"></div></div>
+    <div class="day-pct" style="color:var(--accent)">73,4%</div>
+    <div class="day-presence">30.835 / 42.000 presenze totali · netto omaggi</div>
+    <div class="day-bar"><div class="day-bar-fill" style="width:73.4%;background:var(--accent)"></div></div>
     <div style="font-size:10px;color:var(--text3);margin-top:3px">cap. 14.000 per giornata su tutte e 3 (confermata dai C1)</div>
-    <div class="day-inc" style="color:var(--accent)">Totale: <b>€1.838.593</b><br><span style="font-size:9px;color:var(--text3);font-weight:400">singoli €1.546.580 + abb €292.013 · omaggi esclusi dai conteggi</span></div>
+    <div class="day-inc" style="color:var(--accent)">Totale: <b>€1.885.248</b><br><span style="font-size:9px;color:var(--text3);font-weight:400">singoli €1.589.760 + abb €295.488 · omaggi esclusi dai conteggi</span></div>
   </div>
 </div>
 
@@ -524,9 +471,9 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <span class="month-cell mc-delta" style="color:var(--orange)">−38%</span>
   </div>
   <div class="month-row month-week">
-    <span class="mc-name">Sett 2<span class="month-sub">8–14/8 · 8/8: '25 +1.339 vs '26 +469 · Final '26 sul Day 1 dal 7/8</span></span>
+    <span class="mc-name">Sett 2<span class="month-sub">8–14/8 · 2 gg su 7 · '25 +2.222 vs '26 +970 · Final '26 sul Day 1 dal 7/8</span></span>
     <span class="month-cell mc-2025">5.977<span class="mc-prog">→ 33.476</span></span>
-    <span class="month-cell mc-2026">469<span class="mc-prog">→ 26.448</span></span>
+    <span class="month-cell mc-2026">970<span class="mc-prog">→ 26.949</span></span>
     <span class="month-cell mc-delta" style="color:var(--text3)">parz.</span>
   </div>
   <div class="month-row month-week">
@@ -536,38 +483,14 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <span class="month-cell mc-empty">—</span>
   </div>
   <div class="month-row month-total">
-    <span class="mc-name">Totale al 8/8</span>
-    <span class="month-cell">28.838</span>
-    <span class="month-cell mc-2026">26.448</span>
-    <span class="month-cell mc-delta" style="color:var(--orange)">−8%</span>
+    <span class="mc-name">Totale al 9/8</span>
+    <span class="month-cell">29.721</span>
+    <span class="month-cell mc-2026">26.949</span>
+    <span class="month-cell mc-delta" style="color:var(--orange)">−9%</span>
   </div>
 </div>
-<div class="month-foot">Ogni cella: <b>venduto nel periodo</b> + <b>→ progressivo</b> a fine periodo. Tutti i valori 2025 sono ora REALI (storico ufficiale giornaliero). Tutti i valori 2025 sono ricalcolati sulle <b>sole prime 3 giornate</b> (Day 4 escluso), le uniche confrontabili con il 2026. Su questa base il 2026 chiude l'8/8 a <b>−8%</b> (26.448 contro 28.838) con un prezzo medio superiore del 32%: il 2025 allunga sui volumi, ma il divario di prezzo lo compensa ampiamente. Pattern 2025: luglio cresce gradualmente, poi accelerazione dal 29/7 e plateau altissimo per tutto agosto: <b>agosto valse 15.029 ticket sulle prime 3 date, il 43% della loro stagione</b>. È la finestra in cui il vantaggio va difeso. <b>Storico 2025 corretto il 17/7: −800 biglietti</b> (stampati di cassa, senza incasso) → 17/7/2025 da 1.015 a 215, totale stagione da 44.333 a 43.533 ticket (incasso invariato €2.344.454). Spike 2026: deadline T3 il 20/7 (1.023 titoli). Prossimo spike: <b>lunedì 3 agosto</b> per Day 2 e Day 3, quando i singoli passano a Tier 5 (€69,58 → €80,96 a listino). La data è stata spostata dal 1/8 perché quello era un sabato: la finestra di urgenza sarebbe caduta nel weekend. Ultimo giorno a Tier 4 su D2 e D3: domenica 2/8. <b>Il Day 1 è invece già passato a Tier 5 il 30/7</b>, in anticipo di quattro giorni e a un prezzo TSMS di €82,00. Il suo equivalente 2025 è il 31/7, quando la deadline produsse 1.071 titoli e la finestra 29–31/7 valse 3.168 titoli · €163.461, seguita da un calo del 23% il giorno dopo. Nel 2025 quella finestra cadeva di martedì-mercoledì-giovedì, tutti giorni infrasettimanali: con lo spostamento al lunedì il 2026 replica la stessa condizione di calendario. La deadline T3→T4 già osservata (20/7/2026 vs 30/6/2025) ha dato 1.767 titoli in 2 giorni contro 1.589, cioè +11%, in linea col vantaggio cumulato.</div>
+<div class="month-foot">Ogni cella: <b>venduto nel periodo</b> + <b>→ progressivo</b> a fine periodo. Tutti i valori 2025 sono ora REALI (storico ufficiale giornaliero). Tutti i valori 2025 sono ricalcolati sulle <b>sole prime 3 giornate</b> (Day 4 escluso), le uniche confrontabili con il 2026. Su questa base il 2026 chiude il 9/8 a <b>−9%</b> (26.949 contro 29.721) con un prezzo medio superiore del 32%: il 2025 allunga sui volumi, ma il divario di prezzo lo compensa ampiamente. Pattern 2025: luglio cresce gradualmente, poi accelerazione dal 29/7 e plateau altissimo per tutto agosto: <b>agosto valse 15.029 ticket sulle prime 3 date, il 43% della loro stagione</b>. È la finestra in cui il vantaggio va difeso. <b>Storico 2025 corretto il 17/7: −800 biglietti</b> (stampati di cassa, senza incasso) → 17/7/2025 da 1.015 a 215, totale stagione da 44.333 a 43.533 ticket (incasso invariato €2.344.454). Spike 2026: deadline T3 il 20/7 (1.023 titoli). Prossimo spike: <b>lunedì 3 agosto</b> per Day 2 e Day 3, quando i singoli passano a Tier 5 (€69,58 → €80,96 a listino). La data è stata spostata dal 1/8 perché quello era un sabato: la finestra di urgenza sarebbe caduta nel weekend. Ultimo giorno a Tier 4 su D2 e D3: domenica 2/8. <b>Il Day 1 è invece già passato a Tier 5 il 30/7</b>, in anticipo di quattro giorni e a un prezzo TSMS di €82,00. Il suo equivalente 2025 è il 31/7, quando la deadline produsse 1.071 titoli e la finestra 29–31/7 valse 3.168 titoli · €163.461, seguita da un calo del 23% il giorno dopo. Nel 2025 quella finestra cadeva di martedì-mercoledì-giovedì, tutti giorni infrasettimanali: con lo spostamento al lunedì il 2026 replica la stessa condizione di calendario. La deadline T3→T4 già osservata (20/7/2026 vs 30/6/2025) ha dato 1.767 titoli in 2 giorni contro 1.589, cioè +11%, in linea col vantaggio cumulato.</div>
 
-<!-- SPIKE CONFRONTO -->
-<div class="section-label">Confronto spike — le due deadline a parità di evento</div>
-<div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)">
-    <div style="background:var(--bg2);padding:16px 18px">
-      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">2026 · 19–20/7 · chiusura T3 (€57)</div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:22px;color:var(--accent)">1.767 <span style="font-size:12px;font-weight:600;color:var(--text3)">titoli</span></div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px">€119.879 · PM €67,84</div>
-      <div style="font-size:10px;color:var(--text3);margin-top:6px">picco 1.023 (20/7) · 2,27× il ritmo pre-spike · <b>solo TSMS, FV in pausa</b> · a 25 giorni dal festival</div>
-    </div>
-    <div style="background:var(--bg2);padding:16px 18px">
-      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:8px">2025 · 30–31/7 · chiusura T4</div>
-      <div style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:22px;color:var(--text2)">2.279 <span style="font-size:12px;font-weight:600;color:var(--text3)">titoli</span></div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px">€117.576 · PM €51,59</div>
-      <div style="font-size:10px;color:var(--text3);margin-top:6px">picco 1.208 (30/7) · 1,82× il ritmo pre-spike · tutti i canali attivi · a 14 giorni dal festival</div>
-    </div>
-  </div>
-  <div style="display:flex;gap:18px;flex-wrap:wrap;padding:10px 18px;border-top:1px solid var(--border);font-size:11px;color:var(--text2)">
-    <span>titoli <b style="color:#B85C00">−22%</b></span>
-    <span>incasso <b style="color:var(--green)">+2%</b></span>
-    <span>PM <b style="color:var(--green)">+32%</b></span>
-    <span style="color:var(--text3)">tiraggio relativo più forte nel 2026 (2,27× vs 1,82×) nonostante un canale fermo · ultimo cambio prezzo: <b>venerdì 7/8</b> (T5→Final sul solo Day 1; nel 2025 non esisteva un tier equivalente) · effetto sul Day 1: <b>−54% di volume</b> al primo giorno pieno a €94</span>
-  </div>
-</div>
 <!-- TIER PREZZI -->
 <div id="sec-tier"></div>
 <div class="section-label">Struttura tier — prezzi e scadenze</div>
@@ -600,50 +523,50 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
     <div class="kpi-label">Final — attivo sul Day 1</div>
     <div class="kpi-value" style="font-size:22px">€94,00</div>
     <div class="kpi-delta">GA singolo TSMS · <span>+15% su T5</span></div>
-    <div class="kpi-sub"><b>Aperto sul Day 1 il 7/8</b>, tre giorni prima del 10/8 previsto · 482 titoli cumulati (315 + 167) · prezzo cliente €94,00 contro €94,88 di listino · <b>primo scatto della stagione a produrre un calo di volume rilevante</b></div>
+    <div class="kpi-sub"><b>Aperto sul Day 1 il 7/8</b>, tre giorni prima del 10/8 previsto · 691 titoli cumulati (315 + 167 + 209) · prezzo cliente €94,00 contro €94,88 di listino · <b>€64.954 incassati in tre giorni a listino pieno</b></div>
   </div>
 </div>
 
 <!-- VIP -->
 <div id="sec-vip"></div>
-<div class="section-label">Ticket VIP — Settore B · <b style="color:var(--orange)">vendita singoli CHIUSA su tutte e tre le date dal 1/8</b> · restano solo gli abbonamenti Backstage · al 8 agosto 2026</div>
+<div class="section-label">Ticket VIP — Settore B · <b style="color:var(--orange)">vendita singoli CHIUSA su tutte e tre le date dal 1/8</b> · restano solo gli abbonamenti Backstage · al 9 agosto 2026</div>
 
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:18px">
   <div class="kpi-card">
     <div class="kpi-label">Titoli VIP totali</div>
-    <div class="kpi-value accent">543</div>
-    <div class="kpi-sub">261 TSMS + 202 FV + 80 abb. Backstage</div>
+    <div class="kpi-value accent">548</div>
+    <div class="kpi-sub">261 TSMS + 202 FV + 85 abb. Backstage</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">Incasso VIP</div>
-    <div class="kpi-value green">€137.647</div>
-    <div class="kpi-sub"><b>7,5%</b> dell'incasso con il <b>2,1%</b> dei titoli</div>
+    <div class="kpi-value green">€141.122</div>
+    <div class="kpi-sub"><b>7,5%</b> dell'incasso con il <b>2,0%</b> dei titoli</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">PM VIP</div>
-    <div class="kpi-value" style="color:var(--orange)">€253,49</div>
-    <div class="kpi-sub">3,6× il PM generale (€69,52)</div>
+    <div class="kpi-value" style="color:var(--orange)">€257,52</div>
+    <div class="kpi-sub">3,7× il PM generale (€69,96)</div>
   </div>
 </div>
 
 <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:18px">
   <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Riempimento Settore B — capienza 300 per giornata · inventario ormai chiuso</div>
   <div class="prog-row">
-    <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span><b>Day 1</b> — 282 / 300</span><span style="font-weight:700;color:var(--accent)">94,0%</span></div>
-    <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:94.0%;background:#1A3A5C"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 132 + FV 70 + Backstage 80 · <b>18 posti liberi</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span><b>Day 1</b> — 287 / 300</span><span style="font-weight:700;color:var(--accent)">95,7%</span></div>
+    <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:95.7%;background:#1A3A5C"></div></div>
+    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 132 + FV 70 + Backstage 85 · <b>13 posti liberi</b></div>
   </div>
   <div class="prog-row">
-    <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span><b>Day 2</b> — 275 / 300</span><span style="font-weight:700;color:var(--green)">91,7%</span></div>
-    <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:91.7%;background:#1A7A4A"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 108 + FV 87 + Backstage 80 · <b>25 posti liberi</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span><b>Day 2</b> — 280 / 300</span><span style="font-weight:700;color:var(--green)">93,3%</span></div>
+    <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:93.3%;background:#1A7A4A"></div></div>
+    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 108 + FV 87 + Backstage 85 · <b>20 posti liberi</b></div>
   </div>
   <div class="prog-row">
-    <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span><b>Day 3</b> — 146 / 300</span><span style="font-weight:700;color:var(--orange)">48,7%</span></div>
-    <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:48.7%;background:#B85C00"></div></div>
-    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 21 + FV 45 + Backstage 80 · <b>154 posti liberi</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span><b>Day 3</b> — 151 / 300</span><span style="font-weight:700;color:var(--orange)">50,3%</span></div>
+    <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden"><div style="height:100%;width:50.3%;background:#B85C00"></div></div>
+    <div style="font-size:10px;color:var(--text3);margin-top:3px">TSMS 21 + FV 45 + Backstage 85 · <b>149 posti liberi</b></div>
   </div>
-  <div style="font-size:11px;color:var(--text2);border-top:1px solid var(--border);padding-top:9px;margin-top:4px">Presenze VIP totali <b>703 / 900 (78,1%)</b>. <b>Con i singoli chiusi, i posti liberi utili non sono 197 ma 18.</b> Un abbonamento Backstage occupa un posto su tutte e tre le serate, quindi il massimo ancora collocabile è pari ai posti liberi della giornata più piena — il Day 1, scesa a 18. Ricavo residuo massimo: <b>18 × €695 = €12.510</b>. <b>Secondo giorno consecutivo di vendite Backstage</b>: 4 il 7/8 e 2 l'8/8, per 6 titoli e €4.170 in due giorni. Il margine residuo si è ridotto da 24 a 18 posti: a questo ritmo il Settore B satura intorno al 14/8, cioè proprio in apertura di festival. Se venissero collocati tutti e 20, resterebbero 7 posti sul Day 2 e 136 sul Day 3: <b>143 posti strutturalmente invendibili</b> (~€41.600 a listino singolo), a meno di riaprire i singoli o riconvertirli.</div>
+  <div style="font-size:11px;color:var(--text2);border-top:1px solid var(--border);padding-top:9px;margin-top:4px">Presenze VIP totali <b>718 / 900 (79,8%)</b>. <b>Con i singoli chiusi, i posti liberi utili non sono 182 ma 13.</b> Un abbonamento Backstage occupa un posto su tutte e tre le serate, quindi il massimo ancora collocabile è pari ai posti liberi della giornata più piena — il Day 1, scesa a 13. Ricavo residuo massimo: <b>13 × €695 = €9.035</b>. <b>Terzo giorno consecutivo di vendite Backstage</b>: 4 il 7/8, 2 l'8/8, 5 il 9/8, per 11 titoli e €7.645 in tre giorni. Il margine è passato da 24 a 13 posti in tre giorni: <b>a questo ritmo il Settore B satura entro il 12/8</b>, prima del festival. Vale la pena decidere adesso se collocare i 13 residui o tenerne alcuni per accrediti dell'ultimo momento. Se venissero collocati tutti e 20, resterebbero 7 posti sul Day 2 e 136 sul Day 3: <b>143 posti strutturalmente invendibili</b> (~€41.600 a listino singolo), a meno di riaprire i singoli o riconvertirli.</div>
 </div>
 
 <div style="overflow-x:auto;margin-bottom:18px">
@@ -652,9 +575,9 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
   <tbody>
     <tr><td>TicketSMS — Settore B <span style="color:var(--orange);font-size:10px">(chiusa l'1/8)</span></td><td>132</td><td>108</td><td>21</td><td style="font-weight:700">261</td><td style="font-weight:700">€54.889</td></tr>
     <tr><td>FV — fascia premium <span style="color:var(--text3);font-size:10px">(chiusa il 16/7)</span></td><td>70</td><td>87</td><td>45</td><td style="font-weight:700">202</td><td style="font-weight:700">€35.175</td></tr>
-    <tr><td>Abbonamenti Backstage</td><td colspan="3" style="text-align:center;color:var(--text3)">trasversali · +80 presenze per giornata</td><td style="font-weight:700">80</td><td style="font-weight:700">€47.583</td></tr>
+    <tr><td>Abbonamenti Backstage</td><td colspan="3" style="text-align:center;color:var(--text3)">trasversali · +85 presenze per giornata</td><td style="font-weight:700">85</td><td style="font-weight:700">€51.058</td></tr>
   </tbody>
-  <tfoot><tr><td style="font-weight:700">TOTALE VIP</td><td>282*</td><td>275*</td><td>146*</td><td style="font-weight:700">543</td><td style="font-weight:700">€137.647</td></tr></tfoot>
+  <tfoot><tr><td style="font-weight:700">TOTALE VIP</td><td>287*</td><td>280*</td><td>151*</td><td style="font-weight:700">548</td><td style="font-weight:700">€141.122</td></tr></tfoot>
 </table>
 </div>
 
@@ -667,33 +590,16 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
       
     </div>
     <div>
-      <div style="font-weight:700;font-size:17px;color:var(--orange)">80 <span style="font-size:11px;font-weight:400;color:var(--text3)">Backstage</span></div>
-      <div style="color:var(--text2);margin-top:3px">€47.583</div>
-      <div style="font-size:10px;color:var(--text3);margin-top:4px">4,1% degli abbonamenti · 16,3% del loro incasso</div>
+      <div style="font-weight:700;font-size:17px;color:var(--orange)">85 <span style="font-size:11px;font-weight:400;color:var(--text3)">Backstage</span></div>
+      <div style="color:var(--text2);margin-top:3px">€51.058</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">4,4% degli abbonamenti · 17,3% del loro incasso</div>
     </div>
   </div>
-  <div style="font-size:11px;color:var(--text2);border-top:1px solid var(--border);padding-top:9px;margin-top:11px">Totale abbonamenti <b>1.938 paganti</b> · €292.013 · cap contrattuale 2.500, <b>residuo 562</b> — ma il vincolo reale è il Settore B: al massimo <b>18 Backstage</b> ancora collocabili. Gli 8 omaggi sono esclusi da tutti i conteggi. Fonte: C1 SIAE TicketSMS.</div>
+  <div style="font-size:11px;color:var(--text2);border-top:1px solid var(--border);padding-top:9px;margin-top:11px">Totale abbonamenti <b>1.943 paganti</b> · €295.488 · cap contrattuale 2.500, <b>residuo 557</b> — ma il vincolo reale è il Settore B: al massimo <b>13 Backstage</b> ancora collocabili. Gli 8 omaggi sono esclusi da tutti i conteggi. Fonte: C1 SIAE TicketSMS.</div>
 </div>
 
 <div style="font-size:10px;color:var(--text3);line-height:1.55;margin-bottom:26px;padding:11px 14px;background:var(--bg3);border-radius:8px">
-  <b>Nota.</b> <b>*</b> I totali per giornata nel piede includono gli 80 abbonamenti Backstage, che occupano un posto in Settore B su tutte e tre le serate: la somma 282+275+146 = 703 sono <b>presenze</b>, non titoli. L'incasso FV è al netto dei diritti di prevendita, coerentemente con il criterio usato in tutta la dashboard. Fonte: modelli C1 SIAE di TicketSMS e FV.</div>
-<!-- BOTTOM GRID -->
-<div id="sec-canali"></div>
-<div class="bottom-grid">
-  
-  <div class="box-card">
-    <div class="box-title">Incasso cumulativo per canale</div>
-    <div class="ch-row"><span class="ch-name">TSMS</span><div class="ch-bar-wrap"><div class="ch-bar" style="width:82.7%;background:#1A3A5C"></div></div><span class="ch-val">€1.519.780</span><span class="ch-pct">82,7%</span></div>
-    <div style="font-size:10px;color:var(--text3);padding:3px 0 6px 0;line-height:1.6">singoli €1.227.767 · abbonamenti €292.013</div>
-    <div class="ch-row"><span class="ch-name">FV (sito)</span><div class="ch-bar-wrap"><div class="ch-bar" style="width:17.3%;background:#1A7A4A"></div></div><span class="ch-val">€318.813</span><span class="ch-pct">17,3%</span></div>
-    <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:10px;color:var(--text3);line-height:1.7">
-      FV = Prezzo base pagato (netto) · PM FV €52,16<br>
-      Fonte: CSV TSMS ufficiali + file FV.xls
-    </div>
-  </div>
-</div>
-
-
+  <b>Nota.</b> <b>*</b> I totali per giornata nel piede includono gli 85 abbonamenti Backstage, che occupano un posto in Settore B su tutte e tre le serate: la somma 287+280+151 = 718 sono <b>presenze</b>, non titoli. L'incasso FV è al netto dei diritti di prevendita, coerentemente con il criterio usato in tutta la dashboard. Fonte: modelli C1 SIAE di TicketSMS e FV.</div>
 <!-- TABELLA STORICO -->
 <div id="sec-storico"></div>
 <div class="table-section">
@@ -793,51 +699,82 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
       <tr><td>05/08 · T5</td><td>668</td><td>—</td><td style="font-weight:700">668</td><td style="font-weight:700">€55.324</td><td>22.650</td></tr>
       <tr><td>06/08 · T5</td><td>744</td><td>—</td><td style="font-weight:700">744</td><td style="font-weight:700">€61.008</td><td>23.394</td></tr>
       <tr><td>07/08 · T5/Final</td><td>654</td><td>—</td><td style="font-weight:700">654</td><td style="font-weight:700">€59.903</td><td>24.043</td></tr>
-      <tr class="today-row"><td>08/08 ● Final/T5</td><td>469</td><td>—</td><td style="font-weight:700">469</td><td style="font-weight:700">€41.688</td><td>24.510</td></tr>
+      <tr><td>08/08 · Final/T5</td><td>469</td><td>—</td><td style="font-weight:700">469</td><td style="font-weight:700">€41.688</td><td>24.510</td></tr>
+      <tr class="today-row"><td>09/08 ● Final/T5</td><td>501</td><td>—</td><td style="font-weight:700">501</td><td style="font-weight:700">€46.655</td><td>25.006</td></tr>
       
     </tbody>
     <tfoot>
       <tr>
-        <td>Cum. al 8/8 <span style="font-weight:400;font-size:9px;color:var(--orange)">(netto omaggi)</span></td>
-        <td style="font-weight:700">20.329</td><td>6.119</td><td style="font-weight:700">26.448</td><td style="font-weight:700">€1.838.593<br><span style="font-weight:400;font-size:9px;color:var(--text3)">(incl. abbonamenti €292.013)</span></td>
-        <td>24.510 sing</td>
+        <td>Cum. al 9/8 <span style="font-weight:400;font-size:9px;color:var(--orange)">(netto omaggi)</span></td>
+        <td style="font-weight:700">20.830</td><td>6.119</td><td style="font-weight:700">26.949</td><td style="font-weight:700">€1.885.248<br><span style="font-weight:400;font-size:9px;color:var(--text3)">(incl. abbonamenti €295.488)</span></td>
+        <td>25.006 sing</td>
       </tr>
     </tfoot>
   </table>
   </div>
   <div style="padding:10px 20px;font-size:10px;color:var(--text3);border-top:1px solid var(--border);line-height:1.7">
-    ⚠ <b>Nota metodologica:</b> Colonna TSMS+abb: i singoli TSMS e gli abbonamenti (contati 1×) sono sommati per giornata. Maggio li include già nel lancio. La colonna Cum. sing. traccia i soli biglietti singoli cumulati (24.510). Le righe storiche sono lorde al momento della vendita; i KPI in alto sono netti correnti. TSMS all'8/8: 18.391 singoli netti (D1 9.060 · D2 6.389 · D3 2.942) · €1.227.766,90 — <b>C1 SIAE definitivi</b> (00:39 del 9/8, quindi generati dopo mezzanotte e riferiti al giorno di vendita pieno: nessuna contaminazione con l'8/8, a differenza del passaggio precedente). Annullati già scontati: D1 206 · D2 113 · D3 55. <b>Il fatto della giornata: il Final ha frenato il Day 1.</b> Primo giorno pieno a €94,00 con il Tier 5 chiuso, e il Day 1 vende <b>167 titoli contro i 362 del 7/8, −54%</b>. È il calo più forte mai registrato dopo uno scatto di prezzo in questa stagione: la reazione storica sul Day 1 era stata di −8% al passaggio T4→T5, e il 7/8 stesso — giornata mista, con 47 titoli a €82 e 315 a €94 — aveva ceduto solo l'8%. Quel dato era però ambiguo, perché parte del volume era ancora a listino vecchio. Isolando i soli titoli Final, la sequenza reale è 315 il primo giorno e 167 il secondo: <b>−47% sul venduto a €94</b>. La nota di ieri, secondo cui il prezzo più alto avrebbe potuto allungare il sold out «di un giorno, non di più», va corretta: l'effetto è più forte del previsto. Scomposizione dell'8/8, quadrata al centesimo: <b>Day 1</b> 167 GA Final a €94,00 = €15.698,00; <b>Day 2</b> 204 GA T5 a €82,00 = €16.728,00, tutti dal settore "Anello I"; <b>Day 3</b> 96 GA T5 a €82,00 = €7.872,00; più <b>2 abbonamenti Backstage Tier 4</b> a €695 = €1.390,00. Totale 469 titoli · €41.688,00, prezzo medio di giornata €88,89. È la <b>prima giornata sotto i 650 titoli dopo cinque consecutive sopra</b> (826 · 748 · 668 · 744 · 654) e il minimo di incasso giornaliero dal 2/8. <b>Il costo del Final in termini di ricavo.</b> Sul Day 1 l'8/8 ha prodotto €15.698 contro i €33.464 del 7/8. Anche assumendo che a €82 il Day 1 avrebbe tenuto il ritmo delle giornate precedenti (circa 360 titoli, quindi ~€29.500), il rialzo di prezzo del 15% non compensa il dimezzamento del volume: sulla singola giornata lo scatto è costato ricavo, non lo ha aggiunto. Con 287 presenze residue la questione non è più il prezzo ma il tempo: al ritmo dell'8/8 il sold out cade il <b>10 agosto</b>, ma se la decelerazione osservata prosegue slitta all'<b>11–12 agosto</b>. In entrambi i casi il Day 1 chiude prima del festival, quindi la scelta di aprire il Final non compromette il sold out — riduce solo il ricavo con cui lo si raggiunge. <b>Il Day 3 dà il primo segnale positivo:</b> 96 titoli contro 75, <b>+28%</b>, primo aumento dopo cinque giorni di calo consecutivo. Resta un livello basso in assoluto e con 8.091 posti da collocare non cambia il quadro, ma coincide con il primo giorno in cui il Day 1 costa €12 in più del Day 3: è il primo indizio, ancora debole, che il differenziale di prezzo stia iniziando a spostare domanda verso la terza serata. Il ratio D3/D1 sale a 0,431, però per la ragione sbagliata — il numeratore cresce poco, il denominatore rallenta molto. <b>Abbonamenti:</b> +2 Backstage Tier 4 (da 78 a 80), secondo giorno consecutivo di vendite dopo i 4 del 7/8. Il General Access torna fermo a 1.858. I posti utili residui in Settore B scendono da 20 a 18. <b>Codice "SA" a prezzo zero:</b> +4 sul Day 2 (da 33 a 37), invariati Day 1 e Day 3, totale 105. Restano esclusi come omaggi. Se fossero accrediti con posto fisico il Day 1 passerebbe da 98,0% a 98,3% e le presenze residue da 287 a 249: <b>a questo punto la questione è operativa, non contabile</b>, perché a sei giorni dall'evento la differenza tra 287 e 249 posti determina quando si stacca l'ultimo biglietto. La conferma da TicketSMS va sollecitata oggi. Scomposizione del 6/8, quadrata al centesimo: 394 titoli a €82 sul Day 1, 253 sul Day 2, 97 sul Day 3 = 744 titoli · €61.008,00, <b>tutti allo stesso prezzo e senza alcun abbonamento</b>: il prezzo medio della giornata è quindi €82,00 esatti. <b>Nuova riga a prezzo zero nei C1 del 6/8:</b> compare in Settore A con tipo titolo <b>"SA"</b> — diverso dai codici omaggio "O8"/"O9" usati finora — per 36 titoli sul Day 1, 31 sul Day 2 e 28 sul Day 3, 95 in totale, tutti emessi nella stessa giornata. Essendo a corrispettivo zero sono trattati come omaggi e quindi esclusi dai conteggi, coerentemente con la convenzione adottata dalla v92. La natura del codice va però confermata con TicketSMS, perché se si tratta di accrediti o titoli di servizio essi <b>occupano fisicamente un posto</b>: includendoli, il riempimento del Day 1 passerebbe da 94,1% a 94,4% e i posti residui da 823 a 778. Su una giornata a due giorni dal sold out la differenza è operativamente rilevante. <b>Il Day 2 è passato a Tier 5</b>: 282 dei 288 titoli venduti sono a €82, e transitano tutti dal settore "Anello I" già comparso il 3/8, mentre il Settore A del Day 2 registra solo 6 code a €69. Il settore Anello I è quindi il contenitore con cui il Tier 5 è stato implementato sul Day 2, non un errore isolato; la capienza dichiarata resta però 13.700, identica al Settore A, e va allineata con TicketSMS. <b>Il Day 3 è rimasto a Tier 4 per tutto il 4/8</b>: tutti i 133 titoli venduti sono a €69 e i 2 a €82 caricati in anteprima il 3/8 non si sono mossi. Lo scatto sul Day 3 è stato attivato il <b>5 agosto alle 00:01</b>: da quel momento tutte e tre le giornate sono a €82 e non esiste più un listino a prezzo inferiore. Il 4/8 è quindi l'ultimo giorno di vendita a Tier 4 dell'intera stagione. I singoli di Settore B restano fermi a 132 · 108 · 21 su tutte e tre le giornate, come atteso dopo la chiusura del canale. <b>Nuovo settore sui C1:</b> i 5 titoli a €82 del Day 2 non compaiono in Settore A ma in una riga <b>"AI - Anello I"</b>, mai vista prima e con capienza dichiarata 13.700, identica a quella del Settore A. Sul Day 1 e sul Day 3 il Tier 5 a €82 resta invece dentro il Settore A. Poiché i titoli sono 5 e il prezzo è quello del Tier 5 General Access, in dashboard sono conteggiati come GA; la capienza per giornata resta 14.000 e <b>non</b> viene sommata quella dichiarata per Anello I, che sarebbe incompatibile con i C1 di tutte le altre giornate. Configurazione da verificare con TicketSMS. <b>Base di calcolo: netto omaggi.</b> Dal 1° agosto 2026 tutte le cifre della dashboard escludono i titoli emessi a prezzo zero: all'8/8 sono 6 singoli con codice omaggio (D1 1 · D2 2 · D3 3), 8 abbonamenti e i 105 titoli a prezzo zero con codice "SA" (95 il 6/8, 6 il 7/8 di cui 2 in Settore B sul Day 1, 4 l'8/8 sul Day 2), per 119 titoli e 135 presenze in tutto. L'incasso non cambia — nessuno di questi titoli incassa — mentre i ticket scendono da 26.567 a 26.448, le presenze da 30.459 a 30.324 e il prezzo medio sale da €69,21 a €69,52. I 3 omaggi singoli su Day 1 e Day 2 risultano identici in tutti i C1 dal 29/7 e sono quindi anteriori al 28/7; per le date precedenti non disponiamo di C1 archiviati, perciò i punti della curva fino al 27/7 restano su base lorda con uno scarto massimo di 3 titoli (0,02%), ininfluente sull'andamento. <b>Avvertenza di lettura sui C1:</b> nel quadro preassolta la riga Settore B a €201,67 è il rateo degli abbonamenti Backstage, non una vendita di singoli. Il 1/8 cresce di 3 unità su tutte e tre le giornate, ma si tratta dei medesimi 3 abbonamenti: contarli per giornata porterebbe a 507 titoli invece di 498 e a un incasso gonfiato di €2.618. Lo stesso vale per ogni riga della preassolta. Scomposizione del 31/7, quadrata al centesimo: 184 GA T5 a €82 + 1 Settore B sul Day 1; 200 GA T4 a €69 + 1 Settore B sul Day 2; 101 GA T4 a €69 + 3 omaggi sul Day 3; più 5 abbonamenti Backstage Tier 4 a €695 e 3 omaggi = 498 titoli · €39.913,90. <b>Gli abbonamenti non erano chiusi:</b> il 31/7 sono stati venduti 5 nuovi Backstage Tier 4, portando i paganti da 1.913 a 1.918 e l'incasso abbonamenti da €275.208,20 a €278.683,20. La quota General Access resta ferma a 1.857; a muoversi è stato solo il Backstage, da 56 a 61. Il Tier 5 sul Day 1 tiene: 184 titoli a €82 contro i 200 del giorno di lancio (−8%), quindi lo scatto non ha esaurito la domanda in un colpo solo. <b>Tier 5 attivato sul Day 1 il 30/7</b>, in anticipo sui Day 2 e Day 3 che restano a Tier 4 fino al 2/8. Prezzo cliente rilevato dai C1: €82,00 su TSMS, contro gli €80,96 previsti a listino — scostamento da verificare. Scomposizione del 30/7, quadrata al centesimo: 200 GA T5 a €82 + 28 GA T4 a €69 + 4 Settore B a €290,95 sul Day 1; 234 GA T4 a €69 + 4 Settore B sul Day 2; 79 GA T4 a €69 sul Day 3; più 5 abbonamenti omaggio = 554 titoli · €42.256,60. I 28 titoli a €69 sul Day 1 sono le vendite precedenti allo switch di tier avvenuto in corso di giornata, non vendite parallele a due prezzi. Il 30/7 gli abbonamenti erano passati da 1.913 a 1.918 titoli per la sola emissione di 5 omaggi (riga O9 in preassolta), con i paganti fermi a 1.913 e l'incasso invariato a €275.208,20; la vendita di 5 Backstage paganti è arrivata il giorno dopo. Scomposizione della giornata del 29/7, ricostruita dai C1 e quadrata al centesimo: 577 GA Tier 4 a €69 + 5 Settore B Tier 4 a €290,95 + 1 GA Tier 3 a €57 + 1 omaggio = 584 titoli · €41.324,75. Il titolo a Tier 3 su Day 2 cade su un tier chiuso dal 20/7: coerente con lo scostamento di perimetro già osservato tra C1 e pannelli web, non con una vendita a listino chiuso. <b>Nota sui parziali:</b> i C1 estratti alle 16:13 dello stesso giorno riportavano 242 titoli · €16.629; i restanti 342 titoli · €24.695,75 — il 59% della giornata — sono arrivati tra le 16:13 e la mezzanotte. Un parziale pomeridiano sottostima quindi la giornata di circa 2,4 volte e non va confrontato con una giornata piena del 2025. La capienza 13.700 Settore A + 300 Settore B = 14.000 per giornata è confermata dai C1 SIAE. FV: 6.119 ticket · €318.813,00 netto — CANALE IN PAUSA, fermo dal 16/7. Abbonamenti 1.938 paganti da C1 SIAE (GA T4 260 · GA T3 373 · GA T2 915 · GA T1 310 · Backstage 80, di cui 46 Tier 4 a €695 · cap 2.500, residuo 562), più 8 omaggi. La quota General Access era ferma a 1.857 dal 23/7, è risalita a 1.858 il 7/8 e lì è rimasta: la crescita è tutta Backstage. Sul GA Tier 2 (tier chiuso) i C1 riportano ~11 titoli più dei pannelli web in modo costante (914 vs 904): è una differenza di perimetro tra report fiscale e pannello, non vendite a listino chiuso. Confronto 2025: al 27/7/2025 gli abbonamenti erano <b>1.500</b> (finale 1.903), quindi il 2026 è a +28% sullo stesso periodo e ha già superato il totale finale del 2025 con 8 giorni ancora da vendere. Sulle sole prime 3 giornate, le presenze 2025 all'8/8 valgono 32.636 contro le 30.324 del 2026: <b>il 2026 è dietro di 2.312 presenze</b>, in allargamento costante da cinque giorni (196 → 686 → 1.051 → 1.442 → 2.312). L'8/8 è il singolo giorno peggiore del confronto: 870 presenze di divario aggiunte in ventiquattro ore. Sul perimetro pieno a 4 date il 2025 risultava invece davanti (26.832), ma non è un confronto omogeneo e non viene più usato in dashboard. Il GA Tier 2 (chiuso) che al 23/7 risultava a 915 è rientrato a 904 al passaggio successivo: era un disallineamento di listino cassa, poi riclassificato in GA T4. Cumulato 8/8: 26.448 ticket netti · €1.838.593. Il plateau sopra i 650 titoli si interrompe alla sesta giornata: 469 titoli · €41.688. Il mix di prezzo, che il 7/8 aveva compensato quasi interamente il calo di volume (−12% di titoli, −1,8% di incasso), l'8/8 non basta più: −28% di titoli producono −30% di incasso. Con due listini General Access attivi in parallelo — €94,00 sul Day 1 e €82,00 su Day 2 e Day 3 — il prezzo medio di giornata scende da €91,59 a €88,89 perché il Day 1, che è la giornata a prezzo più alto, è anche quella che vende meno. Andamento per giornata negli ultimi sei giorni: Day 1 287 → 322 → 322 → 394 → 362 → <b>167</b>; Day 2 370 → 288 → 212 → 253 → 212 → <b>204</b>; Day 3 169 → 133 → 133 → 97 → 75 → <b>96</b>. <b>La divaricazione si inverte di segno.</b> Per la prima volta nella stagione il Day 1 non è la giornata che tira: con 167 titoli scende sotto il Day 2 (204), cosa mai avvenuta prima. Il Day 2 resta la giornata più stabile dell'edizione, sesto giorno consecutivo nella banda 200–255, e ora è di fatto il motore del venduto. Il Day 3 risale a 96 dopo cinque giorni di discesa. La lettura d'insieme è che <b>il rallentamento dell'8/8 è quasi interamente attribuibile al Day 1</b>: −195 titoli su un calo complessivo di 185, cioè Day 2 e Day 3 insieme sono in leggera crescita. Non è un cedimento della domanda, è l'effetto di prezzo su una singola giornata. Restano 8.091 posti sul Day 3: con il Day 1 a sei giorni dalla chiusura e già a €94, il redirect verso la terza serata è la leva da attivare adesso — il differenziale di €12 esiste, il primo segnale c'è, ma va sostenuto con comunicazione dedicata e non lasciato al caso. Da qui in avanti il confronto 2025 entra nella finestra decisiva: nel 2025 agosto valse 20.521 ticket, il 47% dell'intera stagione. Gli abbonamenti non sono chiusi: dopo settimane di stasi ne sono stati venduti 5 il 7/8 e 2 l'8/8, portando i paganti a 1.938 su un cap contrattuale di 2.500. Il confronto abbonamenti 2025 usa 1.500 (dato al 27/7, ultimo noto): la serie giornaliera 2025 degli abbonamenti non è disponibile, quindi il delta sugli abbonamenti e sulle presenze è approssimato per difetto di un giorno. I breakdown giornalieri shop-online confermano il ritmo di valle (24/7: 251 titoli lordi, D1 135 · D2 87 · D3 29). La differenza è di base contabile: i breakdown "vendite giornaliere" contano le transazioni lorde, i Report Eventi i titoli validi netti di storni e annullamenti. I cumulati della dashboard seguono i Report Eventi (netti). Tutti i singoli a Tier 4 €69. FV fermo al 16/7: 6.119 titoli · €318.813,00 netto (D1 2.715 · D2 2.375 · D3 1.029), prevendita €57.853,63 staccata. Nota comparabilità: il 2025 include la prevendita, quindi il confronto YoY sull'incasso sottostima il 2026 di circa €58k (like-for-like ≈ +39%). Il 22/7 il venduto reale è 272 titoli · €22.121 (widget "Oggi" ufficiale, PM €81,33); i +149 titoli · €10.773 che completano la variazione cumulato (+421) sono l'allineamento ai pannelli, cioè il recupero del drift shop-vs-cassa accumulato dal 18 al 21/7 (~37 titoli/g non catturati dai riepiloghi durante il cambio T4). In tabella le due componenti sono separate: il venduto giornaliero resta 272. Il 20/7 è il nuovo massimo stagionale: 1.023 titoli · €70.045, con i singoli ancora a Tier 3 (€57); ultimo giorno di Tier 3: dal 21/7 i singoli passano a Tier 4 (TSMS €69,00 base e €290,95 fascia alta, contro €57,00 e €195,00 del T3). Le righe della tabella dal 21/7 riporteranno "T4". Il 17/7 il venduto reale è 311 titoli (€20.949, da riepilogo); i restanti +73 titoli (€6.158) che portano il cumulato a 14.973 sono l'allineamento ai pannelli ufficiali, cioè il recupero del drift accumulato dall'11/7 (il riepilogo espone le sole vendite shop online, il cumulativo include anche i canali non-shop). In tabella le due componenti sono separate: il venduto giornaliero resta 311. Capienza per giornata aggiornata al dato definitivo: 14.000 × 3 = 42.000 presenze, abbonamenti inclusi (Day 3 prima indicato a 12.000). <b>Correzione dell'asse temporale (v96):</b> l'analitico 2025 contiene due righe distinte datate 4 agosto (1.301 e 1.130 titoli, con singoli identici e abbonamenti +109 e −62). Entrambe concorrono al totale ufficiale di stagione, che resta 43.533 titoli, quindi vengono sommate per data anziché trattate come due giorni: l'asse del grafico passa da 91 a 90 punti e le curve 2025 tornano allineate al calendario dopo il 4 agosto. Prima di questa correzione il confronto giornaliero dal 4/8 in poi era sfasato di una posizione e il cumulato 2025 al 4/8 risultava sottostimato di 956 titoli. Curva 2025 del grafico, specchietto e confronti: storico ufficiale 2025 (43.533 ticket · €2.344.454 · PM finale €53,85), con la correzione del 17/7/2025 (−800 biglietti stampati di cassa, senza incasso associato: 1.015→215, incasso invariato €21.528). <b>Curva verde "prime 3 date":</b> ricostruita dall'analitico vendite 2025 per data di vendita e giornata di evento. L'edizione 2025 ebbe <b>quattro</b> serate (finale: Day 1 12.298 · Day 2 12.824 · Day 3 8.665 · Day 4 8.643 · abbonamenti 1.903 = 44.333 lordi); la curva verde esclude il Day 4 e mantiene gli abbonamenti per intero, poiché restavano validi sulle altre tre serate. Al netto della correzione del 17/7 il totale delle prime tre date è <b>35.084</b> contro i 43.533 delle quattro: il Day 4 valeva il 19,4% della stagione. <b>Tutti i confronti con il 2025 usano la base a tre giornate</b> — comparativa, specchietto mensile, barre di avanzamento e curva verde del grafico — poiché l'edizione 2025 ne aveva quattro e il paragone a perimetro pieno sovrastimava sistematicamente il 2025 di circa il 19%. All'8/8 il 2025 sulle prime tre date valeva 28.838 titoli · €1.525.072 · 32.636 presenze · PM €52,88; a fine stagione 35.084 titoli · €1.908.511 · PM €54,40. Gli abbonamenti 2025 sono mantenuti per intero perché restavano validi sulle tre serate considerate. La ripartizione degli 800 biglietti annullati tra le quattro giornate non è documentata nell'analitico: è stata stimata dal prezzo medio di ciascuna giornata nella finestra 10–24/7 (602 sulle prime tre date, 194 sul Day 4, 4 sugli abbonamenti). È l'unica componente stimata del grafico; incide per circa 0,6 punti percentuali sul confronto e non altera la curva blu, che coincide al titolo con lo storico già in uso.
+    ⚠ <b>Nota metodologica:</b> Colonna TSMS+abb: i singoli TSMS e gli abbonamenti (contati 1×) sono sommati per giornata. Maggio li include già nel lancio. La colonna Cum. sing. traccia i soli biglietti singoli cumulati (25.006). Le righe storiche sono lorde al momento della vendita; i KPI in alto sono netti correnti. TSMS al 9/8: 18.887 singoli netti (D1 9.269 · D2 6.584 · D3 3.034) · €1.270.946,90 — <b>C1 SIAE definitivi</b> (01:47–01:48 del 10/8, giornata di vendita piena). Annullati già scontati: D1 206 · D2 113 · D3 55. <b>Il fatto della giornata: il Day 1 è a 73 presenze dal sold out.</b> Con 13.927 su 14.000 il riempimento è al 99,5% e la chiusura cade con ogni probabilità oggi. Il dettaglio per settore è ora quello che conta: <b>60 posti residui in Settore A</b> (13.640 su 13.700) e <b>13 in Settore B</b> (287 su 300). I due contatori vanno guardati separatamente, perché il Settore B si può ancora saturare solo con abbonamenti Backstage e il Settore A solo con singoli Final. <b>La frenata dell'8/8 non era strutturale.</b> Il Day 1 rimbalza da 167 a 209 titoli, +25%, tutti a €94,00. La sequenza completa a listino Final è 315 → 167 → 209: il crollo del secondo giorno era un rientro dopo il picco di apertura, non l'inizio di una caduta. La lettura di ieri, che ipotizzava una decelerazione progressiva con sold out slittato all'11–12 agosto, va corretta: <b>il tier a €94,00 regge una domanda di circa 200 titoli al giorno</b> e in tre giorni ha prodotto 691 titoli · €64.954 a listino pieno. Il costo-opportunità stimato ieri resta valido come ordine di grandezza, ma è più contenuto di quanto sembrasse: la domanda a €94 esiste. Scomposizione del 9/8, quadrata al centesimo: <b>Day 1</b> 209 GA Final a €94,00 = €19.646,00; <b>Day 2</b> 195 GA T5 a €82,00 = €15.990,00 dal settore "Anello I"; <b>Day 3</b> 92 GA T5 a €82,00 = €7.544,00; più <b>5 abbonamenti Backstage Tier 4</b> a €695 = €3.475,00. Totale 501 titoli · €46.655,00. Il <b>prezzo medio di giornata è €93,12, il più alto della stagione</b>, superiore anche al 7/8 (€91,59): il mix si è spostato verso il listino più caro perché il Day 1 è tornato a tirare. <b>Day 2 e Day 3 tengono, senza accelerare.</b> Il Day 2 fa 195 titoli, settimo giorno consecutivo nella banda 195–255: è la giornata più regolare dell'edizione e da sola non chiuderà i 3.098 posti residui in cinque giorni. Il Day 3 fa 92 contro 96, sostanzialmente stabile, e scende sotto la soglia degli 8.000 posti da collocare (7.994). Il ratio D3/D1 resta a 0,431. Il redirect della domanda dal Day 1 in sold out verso il Day 3 diventa operativo da oggi: è l'ultima leva disponibile e vale 7.994 posti, il 63% di tutto l'invenduto residuo. <b>Abbonamenti:</b> +5 Backstage Tier 4, terzo giorno consecutivo di vendite (4, 2, 5). Paganti 1.943 · €295.488,20, General Access sempre fermo a 1.858. I posti utili in Settore B scendono a 13: la saturazione, che due giorni fa sembrava un'ipotesi remota, è ora attesa entro il 12/8. <b>Codice "SA" a prezzo zero:</b> +2 sul Day 2 e +2 sul Day 3, invariato il Day 1, totale 109. Restano esclusi come omaggi. <b>Sul Day 1 la questione è ora dirimente:</b> i 38 titoli SA di quella giornata, se occupano un posto fisico, riducono i residui da 73 a 35 e anticipano il sold out di mezza giornata. A cinque giorni dall'evento e con il contatore a 73, questa è l'unica verifica ancora aperta che possa cambiare una decisione operativa. Scomposizione del 6/8, quadrata al centesimo: 394 titoli a €82 sul Day 1, 253 sul Day 2, 97 sul Day 3 = 744 titoli · €61.008,00, <b>tutti allo stesso prezzo e senza alcun abbonamento</b>: il prezzo medio della giornata è quindi €82,00 esatti. <b>Nuova riga a prezzo zero nei C1 del 6/8:</b> compare in Settore A con tipo titolo <b>"SA"</b> — diverso dai codici omaggio "O8"/"O9" usati finora — per 36 titoli sul Day 1, 31 sul Day 2 e 28 sul Day 3, 95 in totale, tutti emessi nella stessa giornata. Essendo a corrispettivo zero sono trattati come omaggi e quindi esclusi dai conteggi, coerentemente con la convenzione adottata dalla v92. La natura del codice va però confermata con TicketSMS, perché se si tratta di accrediti o titoli di servizio essi <b>occupano fisicamente un posto</b>: includendoli, il riempimento del Day 1 passerebbe da 94,1% a 94,4% e i posti residui da 823 a 778. Su una giornata a due giorni dal sold out la differenza è operativamente rilevante. <b>Il Day 2 è passato a Tier 5</b>: 282 dei 288 titoli venduti sono a €82, e transitano tutti dal settore "Anello I" già comparso il 3/8, mentre il Settore A del Day 2 registra solo 6 code a €69. Il settore Anello I è quindi il contenitore con cui il Tier 5 è stato implementato sul Day 2, non un errore isolato; la capienza dichiarata resta però 13.700, identica al Settore A, e va allineata con TicketSMS. <b>Il Day 3 è rimasto a Tier 4 per tutto il 4/8</b>: tutti i 133 titoli venduti sono a €69 e i 2 a €82 caricati in anteprima il 3/8 non si sono mossi. Lo scatto sul Day 3 è stato attivato il <b>5 agosto alle 00:01</b>: da quel momento tutte e tre le giornate sono a €82 e non esiste più un listino a prezzo inferiore. Il 4/8 è quindi l'ultimo giorno di vendita a Tier 4 dell'intera stagione. I singoli di Settore B restano fermi a 132 · 108 · 21 su tutte e tre le giornate, come atteso dopo la chiusura del canale. <b>Nuovo settore sui C1:</b> i 5 titoli a €82 del Day 2 non compaiono in Settore A ma in una riga <b>"AI - Anello I"</b>, mai vista prima e con capienza dichiarata 13.700, identica a quella del Settore A. Sul Day 1 e sul Day 3 il Tier 5 a €82 resta invece dentro il Settore A. Poiché i titoli sono 5 e il prezzo è quello del Tier 5 General Access, in dashboard sono conteggiati come GA; la capienza per giornata resta 14.000 e <b>non</b> viene sommata quella dichiarata per Anello I, che sarebbe incompatibile con i C1 di tutte le altre giornate. Configurazione da verificare con TicketSMS. <b>Base di calcolo: netto omaggi.</b> Dal 1° agosto 2026 tutte le cifre della dashboard escludono i titoli emessi a prezzo zero: al 9/8 sono 6 singoli con codice omaggio (D1 1 · D2 2 · D3 3), 8 abbonamenti e i 109 titoli a prezzo zero con codice "SA" (95 il 6/8, 6 il 7/8 di cui 2 in Settore B sul Day 1, 4 l'8/8 sul Day 2, 4 il 9/8 tra Day 2 e Day 3), per 123 titoli e 139 presenze in tutto. L'incasso non cambia — nessuno di questi titoli incassa — mentre i ticket scendono da 27.072 a 26.949, le presenze da 30.974 a 30.835 e il prezzo medio sale da €69,64 a €69,96. I 3 omaggi singoli su Day 1 e Day 2 risultano identici in tutti i C1 dal 29/7 e sono quindi anteriori al 28/7; per le date precedenti non disponiamo di C1 archiviati, perciò i punti della curva fino al 27/7 restano su base lorda con uno scarto massimo di 3 titoli (0,02%), ininfluente sull'andamento. <b>Avvertenza di lettura sui C1:</b> nel quadro preassolta la riga Settore B a €201,67 è il rateo degli abbonamenti Backstage, non una vendita di singoli. Il 1/8 cresce di 3 unità su tutte e tre le giornate, ma si tratta dei medesimi 3 abbonamenti: contarli per giornata porterebbe a 507 titoli invece di 498 e a un incasso gonfiato di €2.618. Lo stesso vale per ogni riga della preassolta. Scomposizione del 31/7, quadrata al centesimo: 184 GA T5 a €82 + 1 Settore B sul Day 1; 200 GA T4 a €69 + 1 Settore B sul Day 2; 101 GA T4 a €69 + 3 omaggi sul Day 3; più 5 abbonamenti Backstage Tier 4 a €695 e 3 omaggi = 498 titoli · €39.913,90. <b>Gli abbonamenti non erano chiusi:</b> il 31/7 sono stati venduti 5 nuovi Backstage Tier 4, portando i paganti da 1.913 a 1.918 e l'incasso abbonamenti da €275.208,20 a €278.683,20. La quota General Access resta ferma a 1.857; a muoversi è stato solo il Backstage, da 56 a 61. Il Tier 5 sul Day 1 tiene: 184 titoli a €82 contro i 200 del giorno di lancio (−8%), quindi lo scatto non ha esaurito la domanda in un colpo solo. <b>Tier 5 attivato sul Day 1 il 30/7</b>, in anticipo sui Day 2 e Day 3 che restano a Tier 4 fino al 2/8. Prezzo cliente rilevato dai C1: €82,00 su TSMS, contro gli €80,96 previsti a listino — scostamento da verificare. Scomposizione del 30/7, quadrata al centesimo: 200 GA T5 a €82 + 28 GA T4 a €69 + 4 Settore B a €290,95 sul Day 1; 234 GA T4 a €69 + 4 Settore B sul Day 2; 79 GA T4 a €69 sul Day 3; più 5 abbonamenti omaggio = 554 titoli · €42.256,60. I 28 titoli a €69 sul Day 1 sono le vendite precedenti allo switch di tier avvenuto in corso di giornata, non vendite parallele a due prezzi. Il 30/7 gli abbonamenti erano passati da 1.913 a 1.918 titoli per la sola emissione di 5 omaggi (riga O9 in preassolta), con i paganti fermi a 1.913 e l'incasso invariato a €275.208,20; la vendita di 5 Backstage paganti è arrivata il giorno dopo. Scomposizione della giornata del 29/7, ricostruita dai C1 e quadrata al centesimo: 577 GA Tier 4 a €69 + 5 Settore B Tier 4 a €290,95 + 1 GA Tier 3 a €57 + 1 omaggio = 584 titoli · €41.324,75. Il titolo a Tier 3 su Day 2 cade su un tier chiuso dal 20/7: coerente con lo scostamento di perimetro già osservato tra C1 e pannelli web, non con una vendita a listino chiuso. <b>Nota sui parziali:</b> i C1 estratti alle 16:13 dello stesso giorno riportavano 242 titoli · €16.629; i restanti 342 titoli · €24.695,75 — il 59% della giornata — sono arrivati tra le 16:13 e la mezzanotte. Un parziale pomeridiano sottostima quindi la giornata di circa 2,4 volte e non va confrontato con una giornata piena del 2025. La capienza 13.700 Settore A + 300 Settore B = 14.000 per giornata è confermata dai C1 SIAE. FV: 6.119 ticket · €318.813,00 netto — CANALE IN PAUSA, fermo dal 16/7. Abbonamenti 1.943 paganti da C1 SIAE (GA T4 260 · GA T3 373 · GA T2 915 · GA T1 310 · Backstage 85, di cui 51 Tier 4 a €695 · cap 2.500, residuo 557), più 8 omaggi. La quota General Access era ferma a 1.857 dal 23/7, è risalita a 1.858 il 7/8 e lì è rimasta: la crescita è tutta Backstage. Sul GA Tier 2 (tier chiuso) i C1 riportano ~11 titoli più dei pannelli web in modo costante (914 vs 904): è una differenza di perimetro tra report fiscale e pannello, non vendite a listino chiuso. Confronto 2025: al 27/7/2025 gli abbonamenti erano <b>1.500</b> (finale 1.903), quindi il 2026 è a +28% sullo stesso periodo e ha già superato il totale finale del 2025 con 8 giorni ancora da vendere. Sulle sole prime 3 giornate, le presenze 2025 al 9/8 valgono 33.519 contro le 30.835 del 2026: <b>il 2026 è dietro di 2.684 presenze</b>, in allargamento da sei giorni (196 → 686 → 1.051 → 1.442 → 2.312 → 2.684). Il ritmo di allargamento però rallenta: +372 il 9/8 contro +870 l'8/8. Va tenuto presente che il 2026 sta esaurendo la capienza del Day 1, quindi da qui in avanti il confronto sui volumi diventa meno informativo: il 2026 non può più vendere su una delle tre giornate. Sul perimetro pieno a 4 date il 2025 risultava invece davanti (26.832), ma non è un confronto omogeneo e non viene più usato in dashboard. Il GA Tier 2 (chiuso) che al 23/7 risultava a 915 è rientrato a 904 al passaggio successivo: era un disallineamento di listino cassa, poi riclassificato in GA T4. Cumulato 9/8: 26.949 ticket netti · €1.885.248. La giornata risale a 501 titoli · €46.655 (+7% sui titoli, +12% sull'incasso rispetto all'8/8) e il prezzo medio giornaliero segna il massimo stagionale a €93,12. Con due listini General Access in parallelo — €94,00 sul Day 1 e €82,00 su Day 2 e Day 3 — il PM di giornata è ormai un indicatore del mix più che del prezzo: sale quando il Day 1 tira, scende quando tirano le altre due. Da quando il Day 1 chiuderà, il PM giornaliero tornerà stabilmente vicino a €82. Andamento per giornata negli ultimi sei giorni: Day 1 322 → 322 → 394 → 362 → 167 → <b>209</b>; Day 2 288 → 212 → 253 → 212 → 204 → <b>195</b>; Day 3 133 → 133 → 97 → 75 → 96 → <b>92</b>. <b>Il Day 1 torna in testa</b> dopo il sorpasso di un giorno da parte del Day 2, e lo fa al prezzo più alto del listino. Con 73 presenze residue però la sua corsa finisce oggi o domani, e da quel momento il venduto giornaliero della dashboard si comporrà di sole due giornate: la base di confronto cambia e i totali quotidiani scenderanno per ragioni di capienza, non di domanda. Questo va detto prima che accada, perché un calo del venduto complessivo nei prossimi giorni sarà fisiologico e non un segnale negativo. Restano 3.098 posti sul Day 2 e 7.994 sul Day 3: <b>l'82% dell'invenduto è sulla terza serata più la seconda</b>, e il Day 3 da solo ne rappresenta il 72%. Il redirect della domanda in eccesso sul Day 1 è la sola leva rimasta, con un differenziale di prezzo di €12 a favore del Day 3. Da qui in avanti il confronto 2025 entra nella finestra decisiva: nel 2025 agosto valse 20.521 ticket, il 47% dell'intera stagione. Gli abbonamenti non sono chiusi: dopo settimane di stasi ne sono stati venduti 5 il 7/8, 2 l'8/8 e 5 il 9/8, portando i paganti a 1.943 su un cap contrattuale di 2.500. Il confronto abbonamenti 2025 usa 1.500 (dato al 27/7, ultimo noto): la serie giornaliera 2025 degli abbonamenti non è disponibile, quindi il delta sugli abbonamenti e sulle presenze è approssimato per difetto di un giorno. I breakdown giornalieri shop-online confermano il ritmo di valle (24/7: 251 titoli lordi, D1 135 · D2 87 · D3 29). La differenza è di base contabile: i breakdown "vendite giornaliere" contano le transazioni lorde, i Report Eventi i titoli validi netti di storni e annullamenti. I cumulati della dashboard seguono i Report Eventi (netti). Tutti i singoli a Tier 4 €69. FV fermo al 16/7: 6.119 titoli · €318.813,00 netto (D1 2.715 · D2 2.375 · D3 1.029), prevendita €57.853,63 staccata. Nota comparabilità: il 2025 include la prevendita, quindi il confronto YoY sull'incasso sottostima il 2026 di circa €58k (like-for-like ≈ +39%). Il 22/7 il venduto reale è 272 titoli · €22.121 (widget "Oggi" ufficiale, PM €81,33); i +149 titoli · €10.773 che completano la variazione cumulato (+421) sono l'allineamento ai pannelli, cioè il recupero del drift shop-vs-cassa accumulato dal 18 al 21/7 (~37 titoli/g non catturati dai riepiloghi durante il cambio T4). In tabella le due componenti sono separate: il venduto giornaliero resta 272. Il 20/7 è il nuovo massimo stagionale: 1.023 titoli · €70.045, con i singoli ancora a Tier 3 (€57); ultimo giorno di Tier 3: dal 21/7 i singoli passano a Tier 4 (TSMS €69,00 base e €290,95 fascia alta, contro €57,00 e €195,00 del T3). Le righe della tabella dal 21/7 riporteranno "T4". Il 17/7 il venduto reale è 311 titoli (€20.949, da riepilogo); i restanti +73 titoli (€6.158) che portano il cumulato a 14.973 sono l'allineamento ai pannelli ufficiali, cioè il recupero del drift accumulato dall'11/7 (il riepilogo espone le sole vendite shop online, il cumulativo include anche i canali non-shop). In tabella le due componenti sono separate: il venduto giornaliero resta 311. Capienza per giornata aggiornata al dato definitivo: 14.000 × 3 = 42.000 presenze, abbonamenti inclusi (Day 3 prima indicato a 12.000). <b>Correzione dell'asse temporale (v96):</b> l'analitico 2025 contiene due righe distinte datate 4 agosto (1.301 e 1.130 titoli, con singoli identici e abbonamenti +109 e −62). Entrambe concorrono al totale ufficiale di stagione, che resta 43.533 titoli, quindi vengono sommate per data anziché trattate come due giorni: l'asse del grafico passa da 91 a 90 punti e le curve 2025 tornano allineate al calendario dopo il 4 agosto. Prima di questa correzione il confronto giornaliero dal 4/8 in poi era sfasato di una posizione e il cumulato 2025 al 4/8 risultava sottostimato di 956 titoli. Curva 2025 del grafico, specchietto e confronti: storico ufficiale 2025 (43.533 ticket · €2.344.454 · PM finale €53,85), con la correzione del 17/7/2025 (−800 biglietti stampati di cassa, senza incasso associato: 1.015→215, incasso invariato €21.528). <b>Curva verde "prime 3 date":</b> ricostruita dall'analitico vendite 2025 per data di vendita e giornata di evento. L'edizione 2025 ebbe <b>quattro</b> serate (finale: Day 1 12.298 · Day 2 12.824 · Day 3 8.665 · Day 4 8.643 · abbonamenti 1.903 = 44.333 lordi); la curva verde esclude il Day 4 e mantiene gli abbonamenti per intero, poiché restavano validi sulle altre tre serate. Al netto della correzione del 17/7 il totale delle prime tre date è <b>35.084</b> contro i 43.533 delle quattro: il Day 4 valeva il 19,4% della stagione. <b>Tutti i confronti con il 2025 usano la base a tre giornate</b> — comparativa, specchietto mensile, barre di avanzamento e curva verde del grafico — poiché l'edizione 2025 ne aveva quattro e il paragone a perimetro pieno sovrastimava sistematicamente il 2025 di circa il 19%. Al 9/8 il 2025 sulle prime tre date valeva 29.721 titoli · €1.577.087 · 33.519 presenze · PM €53,06; a fine stagione 35.084 titoli · €1.908.511 · PM €54,40. Gli abbonamenti 2025 sono mantenuti per intero perché restavano validi sulle tre serate considerate. La ripartizione degli 800 biglietti annullati tra le quattro giornate non è documentata nell'analitico: è stata stimata dal prezzo medio di ciascuna giornata nella finestra 10–24/7 (602 sulle prime tre date, 194 sul Day 4, 4 sugli abbonamenti). È l'unica componente stimata del grafico; incide per circa 0,6 punti percentuali sul confronto e non altera la curva blu, che coincide al titolo con lo storico già in uso.
   </div>
 </div>
 
 </div>
 <footer class="site-footer">
   <div class="footer-left">Panorama Festival 2026 · Cave del Duca · Lecce · 14-15-16 agosto</div>
-  <div class="footer-right">DATI AL 8 AGOSTO 2026 · v101 · Final sul Day 1 · Tier 5 su Day 2 e Day 3 · C1 SIAE definitivi · netto omaggi · 2025 su 3 date · curva estesa a fine stagione</div>
+  <div class="footer-right">DATI AL 9 AGOSTO 2026 · v103 · Final sul Day 1 · Tier 5 su Day 2 e Day 3 · C1 SIAE definitivi · netto omaggi · 2025 su 3 date · curva estesa a fine stagione</div>
 </footer>
 
 <script>
 // Cumulativo totale venduto: 2026 vs 2025
 const labels=['21/05','22/05','23/05','24/05','25/05','26/05','27/05','28/05','29/05','30/05','31/05','01/06','02/06','03/06','04/06','05/06','06/06','07/06','08/06','09/06','10/06','11/06','12/06','13/06','14/06','15/06','16/06','17/06','18/06','19/06','20/06','21/06','22/06','23/06','24/06','25/06','26/06','27/06','28/06','29/06','30/06','01/07','02/07','03/07','04/07','05/07','06/07','07/07','08/07','09/07','10/07','11/07','12/07','13/07','14/07','15/07','16/07','17/07','18/07','19/07','20/07','21/07','22/07','23/07','24/07','25/07','26/07','27/07','28/07','29/07','30/07','31/07','01/08','02/08','03/08','04/08','05/08','06/08','07/08','08/08','09/08','10/08','11/08','12/08','13/08','14/08','15/08','16/08','17/08','18/08'];
-const a2026=[1737,3101,3504,3778,4021,4265,4488,4627,4791,4934,5068,5200,5354,5471,5682,5762,5885,6013,6152,6342,6450,6545,6650,6729,6807,6912,7090,7231,7476,8415,8791,8932,9059,9237,9368,9484,9621,9808,9949,10097,10294,10456,10624,10806,10964,11116,11307,11526,11784,12102,12370,12655,12885,13212,13686,14207,14589,14973,15296,16040,17063,17364,17785,18113,18180,18493,18744,19189,19721,20305,20854,21346,21844,22339,23165,23913,24581,25325,25979,26448,null,null,null,null,null,null,null,null,null,null];
+const a2026=[1737,3101,3504,3778,4021,4265,4488,4627,4791,4934,5068,5200,5354,5471,5682,5762,5885,6013,6152,6342,6450,6545,6650,6729,6807,6912,7090,7231,7476,8415,8791,8932,9059,9237,9368,9484,9621,9808,9949,10097,10294,10456,10624,10806,10964,11116,11307,11526,11784,12102,12370,12655,12885,13212,13686,14207,14589,14973,15296,16040,17063,17364,17785,18113,18180,18493,18744,19189,19721,20305,20854,21346,21844,22339,23165,23913,24581,25325,25979,26448,26949,null,null,null,null,null,null,null,null,null];
 const a2025=[468,1407,1614,1743,1856,1955,2066,2152,2284,2388,2487,2553,2610,2706,2873,2971,3069,3151,3241,3353,3539,3755,3898,4049,4171,4283,4501,4816,5048,5217,5345,5526,5661,5865,6056,6254,6647,6965,7206,7517,8795,9104,9309,9473,9614,9809,10001,10212,10498,10786,11220,11662,11951,12300,12791,13247,13833,14048,14412,14754,15071,15636,16294,16975,17579,18193,18755,19185,19844,20733,21941,23012,23832,24735,25509,27940,29180,30552,31879,33528,34663,35428,36290,37396,38494,39704,40762,42171,43533,43533];
 const a2025_3=[468,1407,1614,1743,1856,1955,2066,2152,2284,2388,2487,2553,2610,2706,2793,2860,2935,3006,3095,3191,3329,3513,3635,3759,3867,3965,4154,4416,4609,4751,4857,5020,5138,5301,5460,5637,5962,6232,6447,6695,7833,8106,8286,8429,8557,8741,8910,9096,9343,9601,9996,10393,10652,10952,11385,11772,12301,12524,12840,13135,13418,13914,14467,15065,15581,16090,16532,16908,17464,18154,19175,20055,20731,21539,22190,24273,25337,26444,27499,28838,29721,30347,30999,31829,32596,33476,34259,35084,35084,35084];
 const a2026p=[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,23913,24977,26084,27139,28478,29361,29987,30639,31469,32155,32831,33466,34291,34291,34291];
+// indice dell'ultimo dato reale 2026 e indici delle verticali di riferimento
+const LAST26=a2026.reduce((k,v,n)=>v!=null?n:k,0);
+const IDX_FEST=labels.indexOf('14/08');
+
+// plugin: verticali "oggi" e "apertura festival"
+const refLines={
+  id:'refLines',
+  afterDatasetsDraw(chart){
+    const {ctx,chartArea:{top,bottom},scales:{x}}=chart;
+    const marks=[{i:LAST26,txt:'oggi',col:'#C0392B'},{i:IDX_FEST,txt:'festival',col:'#6A6A68'}];
+    ctx.save();
+    marks.forEach(m=>{
+      if(m.i<0)return;
+      const px=x.getPixelForValue(m.i);
+      ctx.beginPath();ctx.setLineDash([4,4]);ctx.lineWidth=1;ctx.strokeStyle=m.col;
+      ctx.globalAlpha=0.45;ctx.moveTo(px,top);ctx.lineTo(px,bottom);ctx.stroke();
+      ctx.setLineDash([]);ctx.globalAlpha=1;
+      ctx.font='500 9px "DM Mono", monospace';ctx.fillStyle=m.col;
+      ctx.textAlign=px>chart.chartArea.right-46?'right':'left';
+      ctx.fillText(m.txt.toUpperCase(),px+(ctx.textAlign==='right'?-4:4),top+9);
+    });
+    ctx.restore();
+  }
+};
+
 new Chart(document.getElementById('chartMain').getContext('2d'),{
   type:'line',
+  plugins:[refLines],
   data:{labels,datasets:[
     {label:'2026 (attuale)',data:a2026,
-      borderColor:'#C0392B',backgroundColor:'rgba(192,57,43,0.06)',
-      borderWidth:2.5,pointRadius:0,pointHoverRadius:4,fill:true,tension:0.25,order:1},
-    {label:'2025 — 4 date',data:a2025,
-      borderColor:'#3B9BD6',backgroundColor:'rgba(59,155,214,0.05)',
-      borderWidth:2.5,pointRadius:0,pointHoverRadius:4,fill:true,tension:0.25,order:2},
-    {label:'2026 — proiezione',data:a2026p,
-      borderColor:'rgba(192,57,43,0.42)',backgroundColor:'transparent',
-      borderWidth:2.5,pointRadius:0,pointHoverRadius:4,fill:false,tension:0.25,borderDash:[6,4],order:4},
+      borderColor:'#C0392B',backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea)return'rgba(192,57,43,0.05)';
+        const g=ctx.createLinearGradient(0,chartArea.top,0,chartArea.bottom);
+        g.addColorStop(0,'rgba(192,57,43,0.16)');g.addColorStop(1,'rgba(192,57,43,0.00)');return g;},
+      borderWidth:2.6,fill:true,tension:0.25,order:1,
+      pointBackgroundColor:'#C0392B',pointBorderColor:'#fff',pointBorderWidth:2,
+      pointRadius:(c)=>c.dataIndex===LAST26?5:0,pointHoverRadius:5},
     {label:'2025 — prime 3 date',data:a2025_3,
-      borderColor:'#1A7A4A',backgroundColor:'rgba(26,122,74,0.05)',
-      borderWidth:2.5,pointRadius:0,pointHoverRadius:4,fill:false,tension:0.25,order:3}
+      borderColor:'#1A7A4A',backgroundColor:'transparent',
+      borderWidth:2.2,pointRadius:0,pointHoverRadius:4,fill:false,tension:0.25,order:2},
+    {label:'2026 — proiezione',data:a2026p,
+      borderColor:'rgba(192,57,43,0.5)',backgroundColor:'transparent',
+      borderWidth:2,pointRadius:0,pointHoverRadius:4,fill:false,tension:0.25,borderDash:[5,4],order:3},
+    {label:'2025 — 4 date',data:a2025,
+      borderColor:'rgba(59,155,214,0.55)',backgroundColor:'transparent',
+      borderWidth:1.5,pointRadius:0,pointHoverRadius:4,fill:false,tension:0.25,borderDash:[5,4],order:4}
   ]},
   options:{responsive:true,maintainAspectRatio:false,
   onHover:(e,els)=>{e.native.target.style.cursor=els.length?'pointer':'default';},
@@ -898,9 +835,12 @@ new Chart(document.getElementById('chartMain').getContext('2d'),{
             return out;
           }
         }}},
+    layout:{padding:{top:14,right:8}},
     scales:{
-      x:{grid:{display:false},ticks:{color:'#AAAAAA',font:{size:10,family:'DM Mono'},maxRotation:0,autoSkip:true,maxTicksLimit:10},border:{color:'rgba(0,0,0,0.06)'}},
-      y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#AAAAAA',font:{size:10,family:'DM Mono'},callback:v=>v.toLocaleString('it-IT')},border:{color:'transparent'},beginAtZero:true}
+      x:{grid:{display:false},ticks:{color:'#9A9A98',font:{size:10,family:'DM Mono'},maxRotation:0,autoSkip:true,maxTicksLimit:9,padding:6},border:{color:'rgba(0,0,0,0.08)'}},
+      y:{grid:{color:'rgba(0,0,0,0.05)',drawTicks:false},ticks:{color:'#9A9A98',font:{size:10,family:'DM Mono'},padding:8,maxTicksLimit:6,
+          callback:v=>v>=1000?(v/1000).toLocaleString('it-IT',{maximumFractionDigits:1})+'k':v},
+        border:{display:false},beginAtZero:true,title:{display:true,text:'TITOLI CUMULATI',color:'#BFBFBD',font:{size:9,family:'DM Mono'}}}
     }}
 });
 </script>
